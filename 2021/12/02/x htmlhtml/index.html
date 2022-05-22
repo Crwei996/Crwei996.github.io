@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>lyyourc</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="shortcut icon" href="/favicon.ico">
+  
+<link rel="stylesheet" href="/css/app.css">
+
+  <!-- <link rel='stylesheet' href='http://fonts.useso.com/css?family=Source+Code+Pro'> -->
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <nav class="app-nav">
+  
+    
+      <a href="/.">home</a>
+    
+  
+    
+      <a href="/archives">archive</a>
+    
+  
+    
+      <a href="/atom.xml">rss</a>
+    
+  
+</nav>
+
+  <main class="post">
+  <article>
+  <h1 class="article-title">
+    <a href="/2021/12/02/x%20htmlhtml/"></a>
+  </h1>
+
+  <section class="article-meta">
+    <p class="article-date">December 02 2021</p>
+  </section>
+
+  <section class="article-entry">
+    <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<p>高精度加法</p>
+<p>#include&lt;bits/stdc++.h&gt;<br>using namespace std;<br>int a[10090],b[10090],c[10090];<br>char s1[10090],s2[10090];<br>int i,la,lb,lc;<br>int main(){<br>    scanf(“%s”,s1);<br>    scanf(“%s”,s2);<br>    la=strlen(s1);<br>    lb=strlen(s2);<br>    for(i=0;i&lt;la;i++){<br>        a[i]=s1[la-i-1]-‘0’;<br>    }<br>    for(i=0;i&lt;lb;i++){<br>        b[i]=s2[lb-i-1]-‘0’;<br>    }<br>    if(la&gt;lb){<br>        lc=la;<br>    }else{<br>        lc=lb;<br>    }<br>    lc+=1;<br>    for(i=0;i&lt;lc;i++){<br>        c[i]+=a[i]+b[i];<br>        c[i+1]=c[i]/10;<br>        c[i]=c[i]%10;<br>    }<br>    if(c[lc-1]==0&amp;&amp;lc&gt;1){<br>        lc–;<br>    }<br>    for(i=lc-1;i&gt;=0;i–){<br>        printf(“%d”,c[i]);<br>    }<br>    printf(“\n”);<br>    return 0;<br>}</p>
+
+  </section>
+</article>
+
+  <div class="sharing grid">
+  <section class="profile grid-item grid">
+    <img class="avatar" src="http://7xrcp8.com1.z0.glb.clouddn.com/avatar.png" alt="avatar" />
+    <div class="grid-item">
+      <p class="title"> lyyourc </p>
+      <p class="subtitle"> You Are The JavaScript In My HTML </p>
+    <div>
+  </section>
+
+  <section class="share-btns">
+    <!-- <p> share it if you like it~ </p> -->
+    <a
+  class="twitter-share-button"
+  data-size="large"
+  data-via="DrakeLeung"
+  target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?text=gure class="highligh"
+>
+  Tweet
+</a>
+
+<script>
+  window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  js.async = true;
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));
+</script>
+
+  </section>
+</div>
+
+
+  
+    
+<section class="article-comment">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+<script>
+  var disqus_shortname = 'drakeleung';
+  
+  var disqus_url = 'https://crwei996.github.io/2021/12/02/x%20htmlhtml/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+  
+</main>
+
+</body>
+</html>

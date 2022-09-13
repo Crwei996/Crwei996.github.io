@@ -23,13 +23,13 @@
 <meta property="og:site_name" content="做你的Wei">
 <meta property="og:description" content="[TOC] 前言：好久没有管理自己的博客了，最近心血来潮回来捯饬了一下自己的博客感觉还是很不错的，一开始嫌麻烦觉得在这里写文章很麻烦，但是自己真正用心来弄的时候会发现这个东西并不难。确实，很多时候我们在做什么之前都会去考虑所做之事自己是否能够完成或轻松的完成，而我在很多时候遇到一些比较复杂的事情或者难题的时候，都会有一种畏难心理，导致自己心理上去抵制它哈哈哈，属实是不够成熟。好伐啦，我们准备进入正">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgSunnyWeather1.png">
+<meta property="og:image" content="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/img20220913211622.png">
 <meta property="article:published_time" content="2022-09-13T08:56:06.000Z">
-<meta property="article:modified_time" content="2022-09-13T09:56:21.890Z">
+<meta property="article:modified_time" content="2022-09-13T13:17:41.709Z">
 <meta property="article:author" content="Crwei996">
 <meta property="article:tag" content="Kotlin">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgSunnyWeather1.png">
+<meta name="twitter:image" content="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/img20220913211622.png">
   
   
   
@@ -233,7 +233,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          639 words
+          7.1k words
         
       </span>
     
@@ -244,7 +244,7 @@
         
         
         
-          6 mins
+          59 mins
         
       </span>
     
@@ -289,9 +289,86 @@
                 
                 <p>[TOC]</p>
 <p><strong>前言</strong>：好久没有管理自己的博客了，最近心血来潮回来捯饬了一下自己的博客感觉还是很不错的，一开始嫌麻烦觉得在这里写文章很麻烦，但是自己真正用心来弄的时候会发现这个东西并不难。确实，很多时候我们在做什么之前都会去考虑所做之事自己是否能够完成或轻松的完成，而我在很多时候遇到一些比较复杂的事情或者难题的时候，都会有一种畏难心理，导致自己心理上去抵制它哈哈哈，属实是不够成熟。好伐啦，我们准备进入正题之前，我想大致分享一下本篇博客的创作源泉以及创作目的。最近在学习Kotlin的天气，发现自己暑假看书得来的知识没有掌握好，并且对很多Kotlin的知识都不够熟悉不够了解，甚至一些基本用法自己都还不会，然后不得不花费很多时间去改bug（抄书都抄错┭┮﹏┭┮），害，不过还是成功的解决了问题，也在bug中加深了自己对一些知识的理解，就还挺不错的哈哈哈。昨天已经写（写（×）抄（√））完天气了，虽然完成的比较草率(?)哈哈哈，不过也是在低下的效率中逐渐掌握了一些新的知识，故写这篇博客来记录一下自己的学习记录！好啦让我们一起开启SunnyWeather的知识之旅☞！</p>
-<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgSunnyWeather1.png" srcset="/img/loading.gif" lazyload></p>
-<h1 id="一、功能需求及技术可行性分析"><a href="#一、功能需求及技术可行性分析" class="headerlink" title="一、功能需求及技术可行性分析"></a>一、功能需求及技术可行性分析</h1><p>我们在做一个项目之前，首先应该对程序进行需求分析，想一想我们的项目里面需要有什么，需要实现什么功能…我们才动手去实现这些功能。目前SunnyWeather中需要具备一下功能：</p>
-<h1 id="二、Git代码托管"><a href="#二、Git代码托管" class="headerlink" title="二、Git代码托管"></a>二、Git代码托管</h1><h1 id="三、搭建MVVM项目框架"><a href="#三、搭建MVVM项目框架" class="headerlink" title="三、搭建MVVM项目框架"></a>三、搭建MVVM项目框架</h1><h1 id="四、搜索全球城市数据"><a href="#四、搜索全球城市数据" class="headerlink" title="四、搜索全球城市数据"></a>四、搜索全球城市数据</h1><h1 id="五、显示天气信息"><a href="#五、显示天气信息" class="headerlink" title="五、显示天气信息"></a>五、显示天气信息</h1><h1 id="六、手动刷新天气和切换城市"><a href="#六、手动刷新天气和切换城市" class="headerlink" title="六、手动刷新天气和切换城市"></a>六、手动刷新天气和切换城市</h1><h1 id="七、项目提升"><a href="#七、项目提升" class="headerlink" title="七、项目提升"></a>七、项目提升</h1>
+<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimgwallhaven-z8l37o.jpg" srcset="/img/loading.gif" lazyload></p>
+<h1 id="一、功能需求及技术可行性分析"><a href="#一、功能需求及技术可行性分析" class="headerlink" title="一、功能需求及技术可行性分析"></a>一、功能需求及技术可行性分析</h1><p>⭐我们在做一个项目之前，首先应该对程序进行需求分析，想一想我们的项目里面需要有什么，需要实现什么功能…我们才动手去实现这些功能。目前SunnyWeather中需要具备一下功能：</p>
+<p>🌼可以搜索全球大多数国家的各个城市数据</p>
+<p>🌼可以查看全球绝大多数城市的天气信息（准确程度取决于你所使用的天气API）</p>
+<p>🌼可以自由切换城市，查看其他城市的数据</p>
+<p>🌼可以手动刷新天气</p>
+<p>以上是该项目主要的功能点，如果需要全部实现这些功能需要用到网络、数据存储、协程、线程等等技术，还是有一定的难度的，但是既然你发现这这篇宝藏博客，那么我将手把手教会你👊！</p>
+<p>⭐上面只说了项目的主要功能以及需要实现的相关技术，却没有涉及一个关键的点，那就是天气的信息该怎么获取，这个不用担心，已经有大佬为你做好了，你只需要会调用就行了。</p>
+<p>本篇博客以彩云天气为例，简单介绍如何获得彩云天气的API。</p>
+<p>🍃首先登录<a target="_blank" rel="noopener" href="https://dashboard.caiyunapp.com/">彩云天气</a>官网注册：<a target="_blank" rel="noopener" href="https://dashboard.caiyunapp.com/">https://dashboard.caiyunapp.com/</a></p>
+<p>🍃注册完了以后，申请令牌（<strong>重要</strong>），这里还需要让你填写应用链接，由于还没有创建，可以先不填。</p>
+<p>🍃拿到令牌以后就可以使用彩云天气提供的各种API接口了。</p>
+<h1 id="二、Git代码托管"><a href="#二、Git代码托管" class="headerlink" title="二、Git代码托管"></a>二、Git代码托管</h1><p>⭐这里就对Git就不介绍了，毕竟你都能看见我的博客，那你肯定也略知一二，我自己其实也不够了解没什么发言权。好了进入正题，首先你需要有一个Git账号，然后新建一个仓库（Repository），不需要勾选其他的东西，默认就行了，然后点击Create repository按钮就创建成功了。</p>
+<p>🍌接下来就需要创建项目了，在Android studio中新建一个Kotlin项目，创建完需要去将仓库的远程版本库克隆到本地，将仓库的版本库中的Https复制一份，然后打卡cmd，进入你这个项目的目录下，输入git clone （这里是你项目仓库的Https），克隆成功需要做一件事情，那就是将SunnyWeather项目中的文件都复制到上一层目录，这样做的目的：可以将整个项目工程目录添加到版本控制中去，这里有个坑，在这些文件里面有一个隐藏文件（.git），需要你文件夹设置一下才能看见这些隐藏的文件，把所有的文件复制到上一层的时候会有一个文件.gitignote文件，直接覆盖就好，复制完将SunnyWeather文件夹删除。哈哈可能你会觉得有点麻烦，没办法，我一开始接触的时候也觉得麻烦，因为对计算机这些指令不熟悉很陌生，不过没关系，以后就会习惯了。最后，将SunnyWeather项目中的文件提交到Github上面。</p>
+<p>具体指令如下(接着上面的操作继续)：</p>
+<p>🍍git add .         添加操作</p>
+<p>🍍git commit -m “（这里可以描述你这次提交代码的简单说明，比如：First commit）”</p>
+<p>🍍git push origin main</p>
+<p>👁到这一步完成就成功的实现了Git代码托管。</p>
+<h1 id="三、搭建MVVM项目框架"><a href="#三、搭建MVVM项目框架" class="headerlink" title="三、搭建MVVM项目框架"></a>三、搭建MVVM项目框架</h1><p>⭐由于这是我第一次搭建MVVM项目框架加上自己本身对MVVM也不够了解，我就不展开介绍了，详细可以看这个<a target="_blank" rel="noopener" href="https://blog.csdn.net/lmq121210/article/details/80872652?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522166306818616782391895448%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=166306818616782391895448&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~hot_rank-7-80872652-null-null.142%5Ev47%5Epc_rank_34_1,201%5Ev3%5Econtrol&utm_term=%E5%AE%89%E5%8D%93mvvm%E6%A1%86%E6%9E%B6&spm=1018.2226.3001.4187">大佬的文章</a>，我们的项目需要严格按照MVVM项目框架进行搭建。在你的项目的包下新建几个包，项目结构如下图所示。</p>
+<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20220913192832.png" srcset="/img/loading.gif" lazyload></p>
+<p>图中的logic包用于存放业务逻辑相关的代码，ui包用于存放页面展示相关的代码，而logic包下的dao、mode、network分别用于存放数据访问对象、对象模型以及网络相关的代码，ui包下的place和weather则是SunnyWeather中的两个主要界面。由于这些操作会涉及网络和对象存储等操作，需要导包，编辑app/build.gradle文件，如下图所示：</p>
+<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20220913193511.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="四、搜索全球城市数据"><a href="#四、搜索全球城市数据" class="headerlink" title="四、搜索全球城市数据"></a>四、搜索全球城市数据</h1><p>⭐在开始写代码之前，我们可以先准备一些方便后期编程的一些工具类，这里需要写一样获得全局Context的工具类，并且将令牌配置在这里面。在你的项目的包下，新建一个SunnyWeatherApplycation类，代码如下图所示：</p>
+<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20220913194107.png" srcset="/img/loading.gif" lazyload></p>
+<p>红色箭头所指填你申请到的令牌~</p>
+<p>然后我们还需要在AndroidManifest.xml文件中更改android：name指定的内容，改为.SunnyWeatherApplication。</p>
+<p>根据彩云天气的API文档，接下来我们开始定义相关的数据模型。</p>
+<p>⭐在logic/model包下新建PlaceResponse.kt文件,并在这个文件中编写如下代码：</p>
+<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20220913194417.png" srcset="/img/loading.gif" lazyload></p>
+<p>⭐接着定义彩云天气测试搜索API的Retrofit接口，在logic/network包下新建PlaceService接口，代码如下图所示：</p>
+<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20220913194620.png" srcset="/img/loading.gif" lazyload></p>
+<p>⭐定义好了PlaceSertvice接口，我们需要使用它的前提得需要有一个Retrofir构建器，在logic/network包下新建一个ServiceCreator单例类，代码如下所示：</p>
+<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20220913194907.png" srcset="/img/loading.gif" lazyload></p>
+<p>⭐然后我们需要再定义一个统一的网络数据源访问入口，对所有散落请求的API进行封装。同样在logic/network包下新建一个SunnyWeatherNetwork单例类，代码如下所示：</p>
+<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20220913195230.png" srcset="/img/loading.gif" lazyload></p>
+<p>⭐另外我们需要在logic包下新建一个Repository单例类，这是仓库层的统一封装入口，代码如下图所示：</p>
+<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20220913195543.png" srcset="/img/loading.gif" lazyload></p>
+<p>⭐到这里，逻辑层的实现就只剩最后一步了，定义ViewModel层，这里对ViewModel层解释一下，它相当于逻辑层和UI层的一个桥梁，虽然它更偏向于逻辑层。在ui/place包下新建一个PlaceViewModel，代码如下所示：</p>
+<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20220913195904.png" srcset="/img/loading.gif" lazyload></p>
+<p>🍉由于作者很懒，就不进行详细讲解了，天气的UI层代码以及RecyclerView的适配器和展示天气的PlaceFragment可以去我仓库clone查看，我就不在码字了，我的<a target="_blank" rel="noopener" href="https://github.com/Crwei996/SunnyWeather">Github</a>，仓库名字即SunnyWeather。</p>
+<p>注意：由于PlaceFragment中实现了一个搜索框布局，需要修改原生的ActionBar，修改res/values/theme.xml中的代码</p>
+<p>改成这样</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">&lt;style name=<span class="hljs-string">&quot;Theme.SunnyWeather&quot;</span> parent=<span class="hljs-string">&quot;Theme.MaterialComponents.Light.NoActionBar&quot;</span>&gt;<br></code></pre></td></tr></table></figure>
+
+<p>最后别忘记添加网络权限，AndroidManifest.xml文件中添加如下代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">&lt;uses-permission android:name=<span class="hljs-string">&quot;android.permission.INTERNET&quot;</span> /&gt;<br></code></pre></td></tr></table></figure>
+
+<p>完成这些就可以实现全球城市的搜索了，可以看我的Demo，这里不多放图了。</p>
+<p>好了，关于城市搜索这块的代码就先写到这，现在提交代码到Github中去。</p>
+<p>🍃git add .         添加操作</p>
+<p>🍃git commit -m “（这里可以描述你这次提交代码的简单说明，比如：实现搜索全球城市数据功能）”</p>
+<p>🍃git push origin main </p>
+<h1 id="五、显示天气信息"><a href="#五、显示天气信息" class="headerlink" title="五、显示天气信息"></a>五、显示天气信息</h1><p>这一部分的逻辑和实现全球城市的搜索类似，根据API天气信息接口返回的JSON数据进行解析，具体操作如下：</p>
+<p>⭐首先建立数据模型，在logic/model包下新建DailyResponse.kt文件，代码如下：</p>
+<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20220913202821.png" srcset="/img/loading.gif" lazyload></p>
+<p>🥥接着定义一个用于访问天气API的Retrofit接口，在logic/network包下新建WeatherService接口，代码如下：</p>
+<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20220913203128.png" srcset="/img/loading.gif" lazyload></p>
+<p>⚡在SunnyWeatherNetwork这个网络数据源访问入口对新增的WeatherService接口进行封装，添加如下代码到SunnyWeatherNetwork：</p>
+<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20220913203431.png" srcset="/img/loading.gif" lazyload></p>
+<p>💧完成了网络层的代码编写，和之前一样，创建仓库层，不过前面已经创建仓库层Repository了，在Repository中添加如下代码：</p>
+<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20220913203625.png" srcset="/img/loading.gif" lazyload></p>
+<p>🍇到这逻辑层就只剩最后一步了，定义ViewModel层，在ui/weather包下新建一个WeatherViewModel，代码如下所示：</p>
+<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20220913203856.png" srcset="/img/loading.gif" lazyload></p>
+<p>⚽又到了我要偷懒的UI层了，和上面的ui层一样去我仓库clone项目自己去看把，我手敲的好累。</p>
+<p>📕天气的页面布局完成以后，我们还需要一个转换函数，将获得到的天气代码转成一个Sky对象，为什么要这样，因为返回的数据是这样的…哈哈哈哈，在logic/model包下新建一个Sky.kt文件，代码如下所示：（这里太长了就不截图了，截图截不全）</p>
+<figure class="highlight tp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs tp">class Sky(val info:String,val icon:Int,val bg:Int)<br>private val sky = mapOf(<br>    <span class="hljs-string">&quot;CLEAR_DAY&quot;</span> to Sky(<span class="hljs-string">&quot;晴&quot;</span>, <span class="hljs-keyword">R</span>.drawable.one_background, <span class="hljs-keyword">R</span>.drawable.img),<br>    <span class="hljs-string">&quot;CLEAR_NIGHT&quot;</span> to Sky(<span class="hljs-string">&quot;晴&quot;</span>, <span class="hljs-keyword">R</span>.drawable.one_background,  <span class="hljs-keyword">R</span>.drawable.img),<br><br>    <span class="hljs-string">&quot;PARTLY_CLOUDY_DAY&quot;</span> to Sky(<span class="hljs-string">&quot;多云&quot;</span>, <span class="hljs-keyword">R</span>.drawable.one_background, <span class="hljs-keyword">R</span>.drawable.img),<br><br>    <span class="hljs-string">&quot;PARTLY_CLOUDY_NIGHT&quot;</span> to Sky(<span class="hljs-string">&quot;多云&quot;</span>, <span class="hljs-keyword">R</span>.drawable.one_background,  <span class="hljs-keyword">R</span>.drawable.img),<br><br>    <span class="hljs-string">&quot;CLOUDY&quot;</span> to Sky(<span class="hljs-string">&quot;阴&quot;</span>, <span class="hljs-keyword">R</span>.drawable.one_background,  <span class="hljs-keyword">R</span>.drawable.img),<br><br>    <span class="hljs-string">&quot;WINDY&quot;</span> to Sky(<span class="hljs-string">&quot;大风&quot;</span>, <span class="hljs-keyword">R</span>.drawable.one_background,  <span class="hljs-keyword">R</span>.drawable.img),<br><br>    <span class="hljs-string">&quot;LIGHT_RAIN&quot;</span> to Sky(<span class="hljs-string">&quot;小雨&quot;</span>, <span class="hljs-keyword">R</span>.drawable.one_background,  <span class="hljs-keyword">R</span>.drawable.img),<br><br>    <span class="hljs-string">&quot;MODERATE_RAIN&quot;</span> to Sky(<span class="hljs-string">&quot;中雨&quot;</span>, <span class="hljs-keyword">R</span>.drawable.one_background,  <span class="hljs-keyword">R</span>.drawable.img),<br><br>    <span class="hljs-string">&quot;HEAVY_RAIN&quot;</span> to Sky(<span class="hljs-string">&quot;大雨&quot;</span>, <span class="hljs-keyword">R</span>.drawable.one_background,  <span class="hljs-keyword">R</span>.drawable.img),<br>    <span class="hljs-string">&quot;STORM_RAIN&quot;</span> to Sky(<span class="hljs-string">&quot;暴雨&quot;</span>, <span class="hljs-keyword">R</span>.drawable.one_background,  <span class="hljs-keyword">R</span>.drawable.img),<br>    <span class="hljs-string">&quot;THUNDER_SHOWER&quot;</span> to Sky(<span class="hljs-string">&quot;雷阵雨&quot;</span>, <span class="hljs-keyword">R</span>.drawable.one_background, <span class="hljs-keyword">R</span>.drawable.img),<br>    <span class="hljs-string">&quot;SLEET&quot;</span> to Sky(<span class="hljs-string">&quot;雨夹雪&quot;</span>, <span class="hljs-keyword">R</span>.drawable.one_background,  <span class="hljs-keyword">R</span>.drawable.img),<br>    <span class="hljs-string">&quot;LIGHT_SHOW&quot;</span> to Sky(<span class="hljs-string">&quot;小雪&quot;</span>, <span class="hljs-keyword">R</span>.drawable.one_background,  <span class="hljs-keyword">R</span>.drawable.img),<br>    <span class="hljs-string">&quot;MODERATE_SNOW&quot;</span> to Sky(<span class="hljs-string">&quot;中雪&quot;</span>, <span class="hljs-keyword">R</span>.drawable.one_background,  <span class="hljs-keyword">R</span>.drawable.img),<br>    <span class="hljs-string">&quot;HEAVY_SNOW&quot;</span> to Sky(<span class="hljs-string">&quot;大雪&quot;</span>, <span class="hljs-keyword">R</span>.drawable.one_background,  <span class="hljs-keyword">R</span>.drawable.img),<br>    <span class="hljs-string">&quot;STORM_SNOW&quot;</span> to Sky(<span class="hljs-string">&quot;暴雪&quot;</span>, <span class="hljs-keyword">R</span>.drawable.one_background, <span class="hljs-keyword">R</span>.drawable.img),<br>    <span class="hljs-string">&quot;HAIL&quot;</span> to Sky(<span class="hljs-string">&quot;冰雹&quot;</span>, <span class="hljs-keyword">R</span>.drawable.one_background, <span class="hljs-keyword">R</span>.drawable.img),<br>    <span class="hljs-string">&quot;LIGHT_HAZE&quot;</span> to Sky(<span class="hljs-string">&quot;轻度雾霾&quot;</span>, <span class="hljs-keyword">R</span>.drawable.one_background, <span class="hljs-keyword">R</span>.drawable.img),<br>    <span class="hljs-string">&quot;MODERATE_HAZE&quot;</span> to Sky(<span class="hljs-string">&quot;重度雾霾&quot;</span>, <span class="hljs-keyword">R</span>.drawable.one_background,  <span class="hljs-keyword">R</span>.drawable.img),<br>    <span class="hljs-string">&quot;HEAVY_HAZE&quot;</span> to Sky(<span class="hljs-string">&quot;重度雾霾&quot;</span>, <span class="hljs-keyword">R</span>.drawable.one_background,  <span class="hljs-keyword">R</span>.drawable.img),<br>    <span class="hljs-string">&quot;FOG&quot;</span> to Sky(<span class="hljs-string">&quot;雾&quot;</span>, <span class="hljs-keyword">R</span>.drawable.one_background,  <span class="hljs-keyword">R</span>.drawable.img),<br>    <span class="hljs-string">&quot;DUST&quot;</span> to Sky(<span class="hljs-string">&quot;浮尘&quot;</span>, <span class="hljs-keyword">R</span>.drawable.one_background,  <span class="hljs-keyword">R</span>.drawable.img)<br><br>    )<br>fun getSky(skycon:String):Sky&#123;<br>    return sky[skycon] ?:sky[<span class="hljs-string">&quot;CLEAR_DAY&quot;</span>]<span class="hljs-comment">!!</span><br><span class="hljs-comment">&#125;</span><br></code></pre></td></tr></table></figure>
+
+<p>由于省事，我就没有给相应的天气设置相应的背景图和图标了，你有兴趣的话可以自己去找图片和图标添加，关于天气自定义图标添加可以去看我在csdn写的一篇博客☞<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_60387902/article/details/126664727?spm=1001.2014.3001.5501">Android studio使用阿里巴巴图标矢量图库</a>！</p>
+<h1 id="六、手动刷新天气和切换城市"><a href="#六、手动刷新天气和切换城市" class="headerlink" title="六、手动刷新天气和切换城市"></a>六、手动刷新天气和切换城市</h1><p>☀手动刷新天气简单，这里就不详细说了，使用一个SwipeRefreshLayout布局就行，详细步骤看我的项目demo，里面很详细。</p>
+<p>🌙切换城市也是一个DrawerLayout布局的事情，也不细说了，看demo。需要注意的是，在侧滑菜单消失以后记得隐藏输入法，你可以试试不隐藏输入法时的效果，在DrawerLayout的监听里实现相关代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs java">drawerLayout.addDrawerListener(object :DrawerLayout.DrawerListener&#123;<br><br>    <span class="hljs-function">override fun <span class="hljs-title">onDrawerSlide</span><span class="hljs-params">(drawerView: View, slideOffset: Float)</span> </span>&#123;<br>    &#125;<br><br>    <span class="hljs-function">override fun <span class="hljs-title">onDrawerOpened</span><span class="hljs-params">(drawerView: View)</span> </span>&#123;<br>    &#125;<br><br>    <span class="hljs-meta">@SuppressLint(&quot;ServiceCast&quot;)</span><br>    <span class="hljs-function">override fun <span class="hljs-title">onDrawerClosed</span><span class="hljs-params">(drawerView: View)</span> </span>&#123;<br>        <span class="hljs-comment">//因为弹出这个滑动菜单以后，如果想输入新的地址会弹出一个输入法，如果在你输完以后直接就关闭滑动菜单的话需要把输入法也关闭</span><br>        <span class="hljs-comment">//关闭弹出的输入法</span><br>        val manager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager<br>        manager.hideSoftInputFromWindow(drawerView.windowToken,InputMethodManager.HIDE_NOT_ALWAYS)<br>    &#125;<br><br>    <span class="hljs-function">override fun <span class="hljs-title">onDrawerStateChanged</span><span class="hljs-params">(newState: Int)</span> </span>&#123;<br>    &#125;<br>&#125;)<br></code></pre></td></tr></table></figure>
+
+<p>最后一个阶段的开发任务也完成了，记得提交代码</p>
+<p>🍓git add .         添加操作</p>
+<p>🍓git commit -m “（这里可以描述你这次提交代码的简单说明，比如：新增切换城市和手动更新天气的功能）”</p>
+<p>🍓git push origin main </p>
+<h1 id="七、项目提升"><a href="#七、项目提升" class="headerlink" title="七、项目提升"></a>七、项目提升</h1><p>这个项目我是根据郭霖的《第一行代码》写的，我的demo过于简陋，很多能简单的就简单，以及一些ui可能你会觉得好丑或者什么，你可以自行修改；或者说你觉得天气显示的太少了或者不够精美不够详细，你也可以根据彩云天气的API自行修改……终于敲完了，好累好累好累！</p>
+<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20220913205647.png" srcset="/img/loading.gif" lazyload></p>
+
                 
               </div>
             

@@ -23,11 +23,13 @@
 <meta property="og:site_name" content="做你的Wei">
 <meta property="og:description" content="[TOC] 前言：好久没有管理自己的博客了，最近心血来潮回来捯饬了一下自己的博客感觉还是很不错的，一开始嫌麻烦觉得在这里写文章很麻烦，但是自己真正用心来弄的时候会发现这个东西并不难。确实，很多时候我们在做什么之前都会去考虑所做之事自己是否能够完成或轻松的完成，而我在很多时候遇到一些比较复杂的事情或者难题的时候，都会有一种畏难心理，导致自己心理上去抵制它哈哈哈，属实是不够成熟。好伐啦，我们准备进入正">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgSunnyWeather1.png">
 <meta property="article:published_time" content="2022-09-13T08:56:06.000Z">
-<meta property="article:modified_time" content="2022-09-13T09:37:08.990Z">
+<meta property="article:modified_time" content="2022-09-13T09:56:21.890Z">
 <meta property="article:author" content="Crwei996">
 <meta property="article:tag" content="Kotlin">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgSunnyWeather1.png">
   
   
   
@@ -231,7 +233,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          536 words
+          639 words
         
       </span>
     
@@ -242,7 +244,7 @@
         
         
         
-          5 mins
+          6 mins
         
       </span>
     
@@ -286,8 +288,10 @@
               <div class="markdown-body">
                 
                 <p>[TOC]</p>
-<p><strong>前言</strong>：好久没有管理自己的博客了，最近心血来潮回来捯饬了一下自己的博客感觉还是很不错的，一开始嫌麻烦觉得在这里写文章很麻烦，但是自己真正用心来弄的时候会发现这个东西并不难。确实，很多时候我们在做什么之前都会去考虑所做之事自己是否能够完成或轻松的完成，而我在很多时候遇到一些比较复杂的事情或者难题的时候，都会有一种畏难心理，导致自己心理上去抵制它哈哈哈，属实是不够成熟。好伐啦，我们准备进入正题之前，我想大致分享一下本篇博客的创作源泉以及创作目的。最近在学习Kotlin的天气，发现自己暑假看书得来的知识没有掌握好，并且对很多Kotlin的知识都不够熟悉不够了解，甚至一些基本用法自己都还不会，然后不得不花费很多时间去改bug（抄书都抄错┭┮﹏┭┮），害，不过还是成功的解决了问题，也在bug中加深了自己对一些知识的理解，就还挺不错的哈哈哈。昨天已经写（写（×）抄（√））完天气了，虽然完成的比较草率(?)哈哈哈，不过也是在低下的效率中逐渐掌握了一些新的知识，故写这篇博客来记录一下自己的学习记录！好啦让我们一起进入正题！</p>
-<h1 id="一、功能需求及技术可行性分析"><a href="#一、功能需求及技术可行性分析" class="headerlink" title="一、功能需求及技术可行性分析"></a>一、功能需求及技术可行性分析</h1><h1 id="二、Git代码托管"><a href="#二、Git代码托管" class="headerlink" title="二、Git代码托管"></a>二、Git代码托管</h1><h1 id="三、搭建MVVM项目框架"><a href="#三、搭建MVVM项目框架" class="headerlink" title="三、搭建MVVM项目框架"></a>三、搭建MVVM项目框架</h1><h1 id="四、搜索全球城市数据"><a href="#四、搜索全球城市数据" class="headerlink" title="四、搜索全球城市数据"></a>四、搜索全球城市数据</h1><h1 id="五、显示天气信息"><a href="#五、显示天气信息" class="headerlink" title="五、显示天气信息"></a>五、显示天气信息</h1><h1 id="六、手动刷新天气和切换城市"><a href="#六、手动刷新天气和切换城市" class="headerlink" title="六、手动刷新天气和切换城市"></a>六、手动刷新天气和切换城市</h1><h1 id="七、项目提升"><a href="#七、项目提升" class="headerlink" title="七、项目提升"></a>七、项目提升</h1>
+<p><strong>前言</strong>：好久没有管理自己的博客了，最近心血来潮回来捯饬了一下自己的博客感觉还是很不错的，一开始嫌麻烦觉得在这里写文章很麻烦，但是自己真正用心来弄的时候会发现这个东西并不难。确实，很多时候我们在做什么之前都会去考虑所做之事自己是否能够完成或轻松的完成，而我在很多时候遇到一些比较复杂的事情或者难题的时候，都会有一种畏难心理，导致自己心理上去抵制它哈哈哈，属实是不够成熟。好伐啦，我们准备进入正题之前，我想大致分享一下本篇博客的创作源泉以及创作目的。最近在学习Kotlin的天气，发现自己暑假看书得来的知识没有掌握好，并且对很多Kotlin的知识都不够熟悉不够了解，甚至一些基本用法自己都还不会，然后不得不花费很多时间去改bug（抄书都抄错┭┮﹏┭┮），害，不过还是成功的解决了问题，也在bug中加深了自己对一些知识的理解，就还挺不错的哈哈哈。昨天已经写（写（×）抄（√））完天气了，虽然完成的比较草率(?)哈哈哈，不过也是在低下的效率中逐渐掌握了一些新的知识，故写这篇博客来记录一下自己的学习记录！好啦让我们一起开启SunnyWeather的知识之旅☞！</p>
+<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgSunnyWeather1.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="一、功能需求及技术可行性分析"><a href="#一、功能需求及技术可行性分析" class="headerlink" title="一、功能需求及技术可行性分析"></a>一、功能需求及技术可行性分析</h1><p>我们在做一个项目之前，首先应该对程序进行需求分析，想一想我们的项目里面需要有什么，需要实现什么功能…我们才动手去实现这些功能。目前SunnyWeather中需要具备一下功能：</p>
+<h1 id="二、Git代码托管"><a href="#二、Git代码托管" class="headerlink" title="二、Git代码托管"></a>二、Git代码托管</h1><h1 id="三、搭建MVVM项目框架"><a href="#三、搭建MVVM项目框架" class="headerlink" title="三、搭建MVVM项目框架"></a>三、搭建MVVM项目框架</h1><h1 id="四、搜索全球城市数据"><a href="#四、搜索全球城市数据" class="headerlink" title="四、搜索全球城市数据"></a>四、搜索全球城市数据</h1><h1 id="五、显示天气信息"><a href="#五、显示天气信息" class="headerlink" title="五、显示天气信息"></a>五、显示天气信息</h1><h1 id="六、手动刷新天气和切换城市"><a href="#六、手动刷新天气和切换城市" class="headerlink" title="六、手动刷新天气和切换城市"></a>六、手动刷新天气和切换城市</h1><h1 id="七、项目提升"><a href="#七、项目提升" class="headerlink" title="七、项目提升"></a>七、项目提升</h1>
                 
               </div>
             

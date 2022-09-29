@@ -25,7 +25,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/img20220927223148.png">
 <meta property="article:published_time" content="2022-09-27T10:30:37.000Z">
-<meta property="article:modified_time" content="2022-09-29T07:40:52.422Z">
+<meta property="article:modified_time" content="2022-09-29T13:00:18.480Z">
 <meta property="article:author" content="Crwei996">
 <meta property="article:tag" content="计算机网络">
 <meta name="twitter:card" content="summary_large_image">
@@ -233,7 +233,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3.3k words
+          6.3k words
         
       </span>
     
@@ -244,7 +244,7 @@
         
         
         
-          28 mins
+          53 mins
         
       </span>
     
@@ -629,7 +629,286 @@
 </ul>
 </li>
 </ul>
-<h1 id="四、FTP"><a href="#四、FTP" class="headerlink" title="四、FTP*"></a>四、FTP*</h1><h1 id="五、Email"><a href="#五、Email" class="headerlink" title="五、Email"></a>五、Email</h1><h1 id="六、DNS"><a href="#六、DNS" class="headerlink" title="六、DNS"></a>六、DNS</h1><h1 id="七、P2P应用"><a href="#七、P2P应用" class="headerlink" title="七、P2P应用"></a>七、P2P应用</h1><h1 id="八、CDN"><a href="#八、CDN" class="headerlink" title="八、CDN"></a>八、CDN</h1><h1 id="九、TCP套接字（Socket）编程"><a href="#九、TCP套接字（Socket）编程" class="headerlink" title="九、TCP套接字（Socket）编程"></a>九、TCP套接字（Socket）编程</h1><h1 id="十、UDP套接字编程"><a href="#十、UDP套接字编程" class="headerlink" title="十、UDP套接字编程"></a>十、UDP套接字编程</h1><h1 id="十一、碎碎念"><a href="#十一、碎碎念" class="headerlink" title="十一、碎碎念"></a>十一、碎碎念</h1>
+<h1 id="四、FTP"><a href="#四、FTP" class="headerlink" title="四、FTP*"></a>四、FTP*</h1><p>感觉不是很重要，就贴图把！</p>
+<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20220929185627.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20220929185738.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20220929185832.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="五、Email"><a href="#五、Email" class="headerlink" title="五、Email"></a>五、Email</h1><p>老规矩，贴图~</p>
+<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20220929190919.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20220929191019.png" srcset="/img/loading.gif" lazyload><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20220929191116.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimage-20220929191201597.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="六、DNS"><a href="#六、DNS" class="headerlink" title="六、DNS"></a>六、DNS</h1><ul>
+<li>DNS(Domain Name System -&gt; <strong>计算机域名</strong>)<ul>
+<li>IP地址标识主机、路由器</li>
+<li>IP地址不好记忆，存在着“字符串”向IP地址转换的重要性</li>
+<li>人类用户提供要访问机器的“字符串”名称</li>
+<li>有DNS负责转换成为二进制的网络地址</li>
+</ul>
+</li>
+<li>DNS的历史<ul>
+<li>APPANET的名字解析解决方案<ul>
+<li>主机名：没有层次的一个字符串（一个平面）</li>
+<li>存在着一个（集中）的维护站：维护着一张主机名-IP地址的映射文件：Hosts.txt</li>
+<li>每台主机定时从维护站取文件</li>
+</ul>
+</li>
+<li>APPANET解决方案的问题<ul>
+<li>当网络中主机数量很大时<ul>
+<li>没有层次的主机名称很难分配</li>
+<li>文件的管理、发布、查找很麻烦</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>DNS的总体思路和目标<ul>
+<li>主要思路<ul>
+<li>分层的、基于域的命名机制</li>
+<li>若干分布式的数据库完成名字到IP地址的转换</li>
+<li>运行到UDP之上端口号为53的应用服务</li>
+<li>核心的Internet功能，但难以在应用层实现<ul>
+<li>在网络边缘出来复杂性</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>主要目的<ul>
+<li>实现主机名-IP地址的转换</li>
+<li>其他目的<ul>
+<li>主机别名到规范名字的转换：Host aliasing</li>
+<li>邮件服务器别名到邮件服务器的正规名字的转换：Main server aliasing</li>
+<li>负载均衡 load Distribution</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>DNS系统需要存在的问题<ul>
+<li>设备命名<ul>
+<li>用有意义的字符串，方便记忆与使用</li>
+<li>解决一个平面的重名问题：层次化命名</li>
+</ul>
+</li>
+<li>名字到IP地址的转换<ul>
+<li>分布式的数据库维护和响应名字查询</li>
+</ul>
+</li>
+<li>如何维护增加或删除一个域，需要在域名工作中做什么</li>
+</ul>
+</li>
+<li>DNS名字空间<ul>
+<li>DNS域名结构<ul>
+<li>一个层次命名设备会有很多重名</li>
+<li>DNS采用层次树状结构的命名方法</li>
+<li>Internet根被划为几百个顶级域（top lever domains)<ul>
+<li>通用的<ul>
+<li>.com;.edu;.gov;.int;.web</li>
+</ul>
+</li>
+<li>国家的<ul>
+<li>.cn;.us;.nl;.jp</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>每个（子）域下面可划分为若干子域</li>
+<li>树叶是主机</li>
+</ul>
+</li>
+<li>DNS名字空间<ul>
+<li><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20220929193601.png" srcset="/img/loading.gif" lazyload></li>
+</ul>
+</li>
+<li>域名（Domain Name）<ul>
+<li>从本域往上，直到树根</li>
+<li>中间使用“.”间隔不同的级别</li>
+<li>例如：xatu.edu.cn</li>
+<li>域的域名：可以用来表示一个域</li>
+<li>主机的域名：一个域上的主机</li>
+</ul>
+</li>
+<li>域名的管理<ul>
+<li>一个域管理其下的子域<ul>
+<li>.jp被划分为ac.jp cp.jp</li>
+<li>.cn被划分为edu.cn com.cn</li>
+</ul>
+</li>
+<li>创建一个新的域必须要征得它所属域的同意</li>
+</ul>
+</li>
+<li>域与物理网络无关<ul>
+<li>域遵从组织界限，而不是物理网络<ul>
+<li> 一个域的主机可以不在一个网络</li>
+<li>一个网络的主机不一定在一个域</li>
+</ul>
+</li>
+<li>域的划分是逻辑的，而不是物理的</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>解析名字-名字服务器（Name Server）<ul>
+<li>一个名字服务器的问题<ul>
+<li>可靠性问题：单点故障</li>
+<li>扩展性问题：通信容量</li>
+<li>维护问题：远距离的集中式数据库</li>
+</ul>
+</li>
+<li>区域<ul>
+<li>区域的划分由区域管理者自己决定</li>
+<li>将DNS名字空间划分为互不相交的区域，每个区域都是树的一部分</li>
+<li>名字服务器<ul>
+<li>每个区域都有一个名字服务器：维护着他所管辖区域的权威消息</li>
+<li>名字服务器允许被放置在区域之外，以保障可靠性</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>名字空间划分为若干区域Zone<ul>
+<li><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20220929194208.png" srcset="/img/loading.gif" lazyload></li>
+<li>权威DNS服务器：组织机构的DNS服务器，提供组织机构服务器可访问的主机和IP之间的映射，组织机构可以选择实现自己维护或某个服务提供商来维护</li>
+</ul>
+</li>
+<li>顶级域（TLD）服务器：负责顶级域名（如com, org, net,  edu和gov）和所有国家级的顶级域名（如cn, uk, fr, ca,  jp ）<ul>
+<li>Network solutions 公司维护comTLD服务器</li>
+<li>Educause公司维护eduTLD服务器</li>
+</ul>
+</li>
+<li>区域名字服务器维护资源记录<ul>
+<li>资源记录<ul>
+<li>作用：维护域名-IP地址(其他)的映射关系</li>
+<li>位置：Name Server的分布式数据库中</li>
+</ul>
+</li>
+<li>RR格式<ul>
+<li>Domain_name:域名</li>
+<li>Ttl:time to live:生存时间（权威，缓冲记录）</li>
+<li>Class类别：对于Internet，值为IN</li>
+<li>Value值：可以是数字，域名或ASCII串</li>
+<li>Type类别<ul>
+<li>Type=A:Name为主机，Value为IP地址</li>
+<li>Type=CNAME:Name为规范名字的别名，Value为规范名字</li>
+<li>Type=NS:Name为域名(如foo.com),Value为该域名的权威服务器的域名</li>
+<li>Type=MX:Value为name对应的邮件服务器的名字</li>
+</ul>
+</li>
+<li>TTL:生存时间，决定了资源记录应当从缓存中删除的时间</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>DNS大致工作过程</li>
+</ul>
+<p>​    <img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/img20220929194955.png" srcset="/img/loading.gif" lazyload></p>
+<p>贴图贴图</p>
+<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20220929195101.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20220929195158.png" srcset="/img/loading.gif" lazyload></p>
+<p>​    </p>
+<p>这样做，一旦服务器学到了一个映射，就将该映射缓存起来。根服务器通常都在本地服务器中缓存着，使得根服务器不用经常被访问，可以达到提高效率的目的。可能会存在缓存结果和权威资源记录不一致。解决情况：TTL（默认聊天）</p>
+<ul>
+<li>新增一个域需要维护的问题<ul>
+<li>在上级域的名字服务器中增加两条记录，指向这个新增的子域的域名和域名服务器的地址</li>
+<li>在新增子域的名字服务器上运行名字服务器，负责本域的名字解析：名字–&gt;IP地址</li>
+<li>例子：在com域中建立一个“Network Utopia”</li>
+<li>到注册登记机构注册域名networkutopia.com<ul>
+<li>需要向该机构提供权威DNS服务器（基本的、和辅助的）的名字和IP地址</li>
+<li>登记机构在com TLD服务器中插入两条RR记录: (networkutopia.com, dns1.networkutopia.com, NS) (dns1.networkutopia.com, 212.212.212.1, A)</li>
+</ul>
+</li>
+<li>在networkutopia.com的权威服务器中确保有<ul>
+<li>用于Web服务器的<a target="_blank" rel="noopener" href="http://www.networkuptopia.com的类型为a的记录/">www.networkuptopia.com的类型为A的记录</a></li>
+<li>用于邮件服务器mail.networkutopia.com的类型为MX的记录</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="七、P2P应用"><a href="#七、P2P应用" class="headerlink" title="七、P2P应用"></a>七、P2P应用</h1><ul>
+<li><p>纯P2P架构</p>
+<ul>
+<li>没有（或极少）一直运行的服务器</li>
+<li>任意端系统都可以直接通信</li>
+<li>利用peer的服务能力</li>
+<li>Peer节点间歇上网，每次IP 地址都有可能变化</li>
+<li>例子：<ul>
+<li>文件分发（BitTorrent - &gt; 洪流)</li>
+<li>流媒体（KanKan)</li>
+<li>VoIP(Skype)</li>
+</ul>
+</li>
+</ul>
+<p>嗯这个应用这一块我自己有蛮多不理解的，就不记录了，让我看笔记的时候再去百度。</p>
+</li>
+</ul>
+<h1 id="八、CDN"><a href="#八、CDN" class="headerlink" title="八、CDN"></a>八、CDN</h1><p>这一部分嗯贴贴图吧。</p>
+<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20220929204353.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20220929204422.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20220929204452.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="九、TCP套接字（Socket）编程"><a href="#九、TCP套接字（Socket）编程" class="headerlink" title="九、TCP套接字（Socket）编程"></a>九、TCP套接字（Socket）编程</h1><p>我们知道，TCP是可靠的、字节流的服务</p>
+<ul>
+<li>TCP socket：<ul>
+<li>TCP服务，两个进程之间的通信之前需要建立连接<ul>
+<li>两个进程的连接会持续一段时间，通信关系稳定</li>
+</ul>
+</li>
+<li>可以用一个整数表示两个应用实体之间的通信关系，本地标识</li>
+<li>穿过层间接口的信息量最小</li>
+<li>TCP socket：源IP，源端口，目标IP，目标端口</li>
+</ul>
+</li>
+<li>TCP套接字4元组是一个具有本地意义的标识<ul>
+<li>4元组：源IP，源端口，目标IP，目标端口</li>
+<li>唯一的指定了一个会话（2个进程之间的会话关系）</li>
+<li>应用使用的这个标示，与远程的应用进程通信</li>
+<li>不必在每一个报文的发送都要指定这4元组</li>
+<li>就像使用操作系统打开一个文件，OS返回一个文件句柄一样，以后使用这个文件句柄，而不是使用这个文件的目录名、文件名</li>
+<li>简单，便于管理</li>
+</ul>
+</li>
+<li><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20220929204951.png" srcset="/img/loading.gif" lazyload></li>
+</ul>
+<p>​    <img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20220929205107.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="十、UDP套接字编程"><a href="#十、UDP套接字编程" class="headerlink" title="十、UDP套接字编程"></a>十、UDP套接字编程</h1><p>我们知道，UDP是不可靠的（数据UDP数据报）服务</p>
+<ul>
+<li><p>UDP socket</p>
+<ul>
+<li>UDP服务，两个进程之间的通信需要之前无需建立连接<ul>
+<li>每个报文都是独立传输的</li>
+<li>前后报文可能给不同的分布式进程</li>
+</ul>
+</li>
+<li>因此，只能用一个整数表示本应用实体的标示<ul>
+<li>因为这个报文可能传给另外一个分布式进程</li>
+</ul>
+</li>
+<li>穿过层间接口的信息大小最小</li>
+<li>UDP socket:本IP,本端口</li>
+<li>但是传输报文时：必须要提供对方的IP，port<ul>
+<li>接收报文时：传输层需要上传对方的IP，port</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>UDP 套接字</p>
+<ul>
+<li>对于使用无连接服务（UDP）的应用而言，套接字是2元组的一个具有本地意义的标示<ul>
+<li>2元组：IP，port(源端指定)</li>
+<li>UDP套接字指定了应用所在的一个端节点（end point)</li>
+<li>在发送数据报时，采用创建好的本地套接字（标示ID），就不必在发送每个报文中指明自己所采用的ip和port</li>
+<li>但是在发送报文时，必须要指定对方的ip和udp port</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20220929205750.png" srcset="/img/loading.gif" lazyload></p>
+</li>
+</ul>
+<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20220929205848.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="十一、碎碎念"><a href="#十一、碎碎念" class="headerlink" title="十一、碎碎念"></a>十一、碎碎念</h1><p>彦祖我就知道你会来看这里。</p>
+
                 
               </div>
             

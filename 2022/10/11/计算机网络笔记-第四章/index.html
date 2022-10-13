@@ -25,7 +25,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/img20221011170424.png">
 <meta property="article:published_time" content="2022-10-11T09:08:26.000Z">
-<meta property="article:modified_time" content="2022-10-13T03:36:27.876Z">
+<meta property="article:modified_time" content="2022-10-13T09:16:35.752Z">
 <meta property="article:author" content="Crwei996">
 <meta property="article:tag" content="计算机网络">
 <meta name="twitter:card" content="summary_large_image">
@@ -233,7 +233,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.8k words
+          4.3k words
         
       </span>
     
@@ -244,7 +244,7 @@
         
         
         
-          24 mins
+          36 mins
         
       </span>
     
@@ -351,8 +351,8 @@
 <ul>
 <li>同时并发转发多个分组，克服总线带宽限制</li>
 <li>Banyan（榕树）网络，crossbar(纵横) 和其它的互联网络被开发，将多个处理器连接成多处理器</li>
-<li>当分组从端口A到达，转给端口Y；控 制器短接相应的两个总线</li>
-<li>高级设计：将数据报分片为固定长度的 信元，通过交换网络交换</li>
+<li>当分组从端口A到达，转给端口Y；控制器短接相应的两个总线</li>
+<li>高级设计：将数据报分片为固定长度的信元，通过交换网络交换</li>
 <li>Cisco12000：以60Gbps的交换速率通过互联网络</li>
 </ul>
 <h2 id="六-输出端口"><a href="#六-输出端口" class="headerlink" title="(六)输出端口"></a>(六)输出端口</h2><p>不是所有的数据报（分组）都能成功从输出端口输出，因为会存在数据报丢失的情况，由于拥塞，缓存区没有空间。</p>
@@ -385,7 +385,7 @@
 <p>四种IP地址分类：</p>
 <p><strong>A类IP地址</strong></p>
 <p>A类IP地址由1字节的网络地址和3字节主机地址组成，网络地址的最高位必须是”0”；</p>
-<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs dns">地址的表示范围为：<span class="hljs-number">0.0.0.0</span>~<span class="hljs-number">127.255.255.255</span>；<br>默认子网掩码为：<span class="hljs-number">255.0.0.0</span> 或 /<span class="hljs-number">8</span>；<br><span class="hljs-number">55.0.0.0</span> =&gt;<span class="hljs-number">11111111</span>.<span class="hljs-number">00000000</span>.<span class="hljs-number">00000000</span>.<span class="hljs-number">00000000</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs dns">地址的表示范围为：<span class="hljs-number">0.0.0.0</span>~<span class="hljs-number">127.255.255.255</span>；<br>默认子网掩码为：<span class="hljs-number">255.0.0.0</span> 或 /<span class="hljs-number">8</span>；<br><span class="hljs-number">255.0.0.0</span> =&gt;<span class="hljs-number">11111111</span>.<span class="hljs-number">00000000</span>.<span class="hljs-number">00000000</span>.<span class="hljs-number">00000000</span><br></code></pre></td></tr></table></figure>
 
 <figure class="highlight llvm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs llvm">网络号全为<span class="hljs-number">1</span>的IP:<span class="hljs-number">127</span>.<span class="hljs-keyword">x</span>.<span class="hljs-keyword">x</span>.<span class="hljs-keyword">x</span>/<span class="hljs-number">8</span>表示保留，用于本机回环测试用。<br>主机号全为<span class="hljs-number">0</span>代表本主机所在的网络地址<span class="hljs-comment">;主机号全为1代表该网络上的所有主机.故不能分配。 </span><br><br>即：<br>A类地址可用的网络数为<span class="hljs-number">2</span>^<span class="hljs-number">7</span><span class="hljs-number">-2</span><span class="hljs-operator">=</span><span class="hljs-number">126</span>个；<br>每个网络能容纳的主机数为<span class="hljs-number">2</span>^<span class="hljs-number">24</span><span class="hljs-number">-2</span><span class="hljs-operator">=</span><span class="hljs-number">16777214</span>（上千万台）；<br>一般分配给规模比较大的网络使用。 <br></code></pre></td></tr></table></figure>
 
@@ -437,7 +437,104 @@
 <p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20221013111958.png" srcset="/img/loading.gif" lazyload></p>
 <p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20221013112008.png" srcset="/img/loading.gif" lazyload></p>
 <p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20221013112019.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="四-DHCP-Dynamic-Host-Configuration-Protocol"><a href="#四-DHCP-Dynamic-Host-Configuration-Protocol" class="headerlink" title="(四)DHCP:Dynamic Host Configuration Protocol"></a>(四)DHCP:Dynamic Host Configuration Protocol</h2><h2 id="五-NAT-Network-Address-Translation"><a href="#五-NAT-Network-Address-Translation" class="headerlink" title="(五)NAT:Network Address Translation"></a>(五)NAT:Network Address Translation</h2><h2 id="六-IPV6"><a href="#六-IPV6" class="headerlink" title="(六)IPV6"></a>(六)IPV6</h2><h1 id="四、通用转发和SDN"><a href="#四、通用转发和SDN" class="headerlink" title="四、通用转发和SDN"></a>四、通用转发和SDN</h1><h2 id="一-网络层"><a href="#一-网络层" class="headerlink" title="(一)网络层"></a>(一)网络层</h2><h2 id="二-SDN"><a href="#二-SDN" class="headerlink" title="(二)SDN"></a>(二)SDN</h2><h2 id="三-OpenFlow"><a href="#三-OpenFlow" class="headerlink" title="(三)OpenFlow"></a>(三)OpenFlow</h2>
+<h2 id="四-DHCP-Dynamic-Host-Configuration-Protocol"><a href="#四-DHCP-Dynamic-Host-Configuration-Protocol" class="headerlink" title="(四)DHCP:Dynamic Host Configuration Protocol"></a>(四)DHCP:Dynamic Host Configuration Protocol</h2><h2 id="五-NAT-Network-Address-Translation"><a href="#五-NAT-Network-Address-Translation" class="headerlink" title="(五)NAT:Network Address Translation"></a>(五)NAT:Network Address Translation</h2><h2 id="六-IPV6"><a href="#六-IPV6" class="headerlink" title="(六)IPV6"></a>(六)IPV6</h2><h1 id="四、通用转发和SDN"><a href="#四、通用转发和SDN" class="headerlink" title="四、通用转发和SDN"></a>四、通用转发和SDN</h1><h2 id="一-网络层"><a href="#一-网络层" class="headerlink" title="(一)网络层"></a>(一)网络层</h2><p>网络层功能：</p>
+<ul>
+<li>转发：对于从某个端口到来的分组转发到合适的输出端口</li>
+<li>路由：觉得分组从源端到目标端的路径</li>
+<li>网络层包括数据平面和控制平面。</li>
+</ul>
+<p>路由器的网络层功能：</p>
+<ul>
+<li>IP转发：对于到来的分组按照路由表决定如何转发，数据平面</li>
+<li>路由：决定路径，计算路由表；处在控制平面</li>
+</ul>
+<p>还有其他种类繁多网络设备（中间盒）：</p>
+<ul>
+<li>交换机；防火墙；NAT；IDS；负载均衡设备</li>
+</ul>
+<p>网络设备控制平面的实现方式特点：</p>
+<p>互联网网络设备：传统方式都是通过分布式，每台设备的方法来实现数据平面和控制平面功能</p>
+<ul>
+<li>垂直集成：每台路由器或其他网络设备，包括<ul>
+<li>硬件、在私有的操作系统</li>
+<li>互联网标准协议（IP,RIP,IS-IS,OSPF,BGP)的私有实现</li>
+<li>从上到下都有一个厂商提供*代价大，被设备上“绑架”）</li>
+</ul>
+</li>
+<li>每个设备都实现了数据平面和控制平面的事情<ul>
+<li>控制平面的功能是分布式实现的</li>
+</ul>
+</li>
+<li>设备基本上只能（分布式升级困难）按照固定方式工作， 控制逻辑固化。不同的网络功能需要不同的</li>
+<li>数据+控制平面）集成&gt;（控制逻辑）分布-&gt;固化<ul>
+<li>代价大；升级困难；管理困难等</li>
+</ul>
+</li>
+</ul>
+<p>传统方式实现网络功能的问题</p>
+<ul>
+<li>垂直集成&gt;昂贵、不便于创新的生态</li>
+<li>分布式、固化设备功能==网络设备种类繁多<ul>
+<li>无法改变路由等工作逻辑，无法实现流量工程等高级特性</li>
+<li>配置错误影响全网运行；升级和维护会涉及到全网设备：管理困难</li>
+<li>要增加新的网络功能，需要设计、实现以及部署新的 特定设备，设备种类繁多</li>
+</ul>
+</li>
+<li>~2005: 开始重新思考网络控制平面的处理方式<ul>
+<li>集中：远程的控制器集中实现控制逻辑</li>
+<li>远程：数据平面和控制平面的分离</li>
+</ul>
+</li>
+</ul>
+<h2 id="二-SDN"><a href="#二-SDN" class="headerlink" title="(二)SDN"></a>(二)SDN</h2><p><strong>SDN:逻辑上集中的控制平面</strong> 实现了控制平面和数据平面的分离。</p>
+<p>一个不同的（通常是远程）控制器和CA交互，控制器决定分组 转发的逻辑（可编程），CA所在设备执行逻辑。</p>
+<p>SDN的实现思路：</p>
+<ul>
+<li>网络设备数据平面和控制平面分离</li>
+<li>数据平面-分组交换机<ul>
+<li>将路由器、交换机和目前大多数网络设备的功能进一步抽象成：按照流表（由控制平面设置的控制逻辑）进行PDU （帧、分组）的动作（包括转发、丢弃、拷贝、泛洪、阻塞）</li>
+<li>统一化设备功能：SDN交换机（分组交换机），执行控制逻辑</li>
+</ul>
+</li>
+</ul>
+<p>SDN控制平面和数据平面分离的优势</p>
+<ul>
+<li>水平集成控制平面的开放实现（而非私有实 现），创造出好的产业生态，促进发展<ul>
+<li>分组交换机、控制器和各种控制逻辑网络应用app可由不同 厂商生产，专业化，引入竞争形成良好生态</li>
+<li>集中式实现控制逻辑，网络管理容易<ul>
+<li>集中式控制器了解网络状况，编程简单，传统方式困难</li>
+<li>避免路由器的误配置</li>
+</ul>
+</li>
+<li>基于流表的匹配+行动的工作方式允许“可编程的”分组交换机<ul>
+<li>实现流量工程等高级特性</li>
+<li>在此框架下实现各种新型（未来）的网络设备</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>流量工程：传统路由比较困难</li>
+</ul>
+<p>不想贴图了，呜呜，看书看书。</p>
+<h2 id="三-OpenFlow"><a href="#三-OpenFlow" class="headerlink" title="(三)OpenFlow"></a>(三)OpenFlow</h2><p>OpenFlow数据平面抽象</p>
+<ul>
+<li>流:由分组（帧）头部字段所定义</li>
+<li>通用转发：简单的分组处理规则<ul>
+<li>模式: 将分组头部字段和流表进行匹配</li>
+<li>行动：对于匹配上的分组，可以是丢弃、转发、修改、 将匹配的分组发送给控制器</li>
+<li>优先权Priority: 几个模式匹配了，优先采用哪个，消除歧义</li>
+<li>计数器Counters:#bytes 以及#packets</li>
+<li>路由器中的流表定义了路由器的匹配+行动规则（流表由控制器计算并下发）</li>
+</ul>
+</li>
+</ul>
+<p>这个上课的时候其实我也没怎么弄明白，得查阅资料学习一下。</p>
+<h1 id="五、中间设备（补充）"><a href="#五、中间设备（补充）" class="headerlink" title="五、中间设备（补充）"></a>五、中间设备（补充）</h1><p>从一般的概念来讲，将网络互相连接起来要使用一些中间设备。根据中间设备所在的层次，可以有以下四种不同的中间设备：</p>
+<p>①物理层使用的中间设备叫 <strong>转发器</strong></p>
+<p>②数据链路层使用的中间设备叫作<strong>网桥</strong>或<strong>桥接器</strong>，以及<strong>交换机</strong>。</p>
+<p>③网络层使用的中间设备叫作<strong>路由器</strong></p>
+<p>④在网络层以上使用的中间设备叫作<strong>网关</strong>。用网关连接两个不兼容的系统需要在高层进行协议的转换。</p>
+
                 
               </div>
             

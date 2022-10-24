@@ -25,7 +25,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/img20220923113255.png">
 <meta property="article:published_time" content="2022-09-23T03:28:25.000Z">
-<meta property="article:modified_time" content="2022-10-11T09:07:02.472Z">
+<meta property="article:modified_time" content="2022-10-24T09:12:50.231Z">
 <meta property="article:author" content="Crwei996">
 <meta property="article:tag" content="计算机网络">
 <meta name="twitter:card" content="summary_large_image">
@@ -233,7 +233,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          5.6k words
+          5.8k words
         
       </span>
     
@@ -244,7 +244,7 @@
         
         
         
-          47 mins
+          49 mins
         
       </span>
     
@@ -385,6 +385,54 @@
 <p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20220923130110.png" srcset="/img/loading.gif" lazyload></p>
 <p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20220923130218.png" srcset="/img/loading.gif" lazyload></p>
 <p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20220923130323.png" srcset="/img/loading.gif" lazyload></p>
+<p><strong>分组交换是重点！！！</strong></p>
+<p>这里来一个数据报和虚电路的对比：</p>
+<p><strong>TCP–虚电路</strong></p>
+<p><strong>UDP–数据报</strong></p>
+<table>
+<thead>
+<tr>
+<th>对比的方面</th>
+<th>虚电路</th>
+<th>数据报</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>连接的建立</strong></td>
+<td>必须有</td>
+<td>不要</td>
+</tr>
+<tr>
+<td><strong>目的站地址</strong></td>
+<td>仅在连接建立阶段使用，每个分组使用短的虚电路号</td>
+<td>每个分组都有目的站的全地址</td>
+</tr>
+<tr>
+<td><strong>路由选择</strong></td>
+<td>在虚电路连接建立时进行，所有分组均按同一路由</td>
+<td>每个分组独立选择路由</td>
+</tr>
+<tr>
+<td><strong>当路由器出故障</strong></td>
+<td>所有通过了出故障的路由器的虚电路均不能工作</td>
+<td>出故障的路由器可能会丢失分组，一些路由可能会发生变化</td>
+</tr>
+<tr>
+<td><strong>分组的顺序</strong></td>
+<td>总是按发送顺序到达目的站</td>
+<td>到达目的站时可能不按发送顺序</td>
+</tr>
+<tr>
+<td>端到端的差错处理</td>
+<td>由通信子网负责</td>
+<td>由主机负责</td>
+</tr>
+<tr>
+<td>端到端的流量控制</td>
+<td>由通信子网负责</td>
+<td>由主机负责</td>
+</tr>
+</tbody></table>
 <h1 id="五、接入网和物理媒介"><a href="#五、接入网和物理媒介" class="headerlink" title="五、接入网和物理媒介"></a>五、接入网和物理媒介</h1><p>🍐</p>
 <ul>
 <li><p>接入网</p>

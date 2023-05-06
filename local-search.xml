@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>国产CPU科普</title>
+    <link href="/2023/04/12/%E5%9B%BD%E4%BA%A7CPU%E7%A7%91%E6%99%AE/"/>
+    <url>/2023/04/12/%E5%9B%BD%E4%BA%A7CPU%E7%A7%91%E6%99%AE/</url>
+    
+    <content type="html"><![CDATA[<h1 id="一、国产CPU种类"><a href="#一、国产CPU种类" class="headerlink" title="一、国产CPU种类"></a>一、国产CPU种类</h1><table><thead><tr><th></th><th align="center">海光</th><th align="center">兆芯</th><th align="center">飞腾</th><th align="center">鲲鹏</th><th align="center">倚天710</th><th align="center">申威</th><th align="center">龙芯</th></tr></thead><tbody><tr><td>研发单位</td><td align="center">海光信息</td><td align="center">上海兆芯</td><td align="center">天津飞腾</td><td align="center">海思华为</td><td align="center">平头哥</td><td align="center">申威科技</td><td align="center">龙芯中科</td></tr><tr><td>团队背景</td><td align="center">X86授权+自研</td><td align="center">X86/ARM授权</td><td align="center">SPARC/ARM授权+自研</td><td align="center">ARM授权+自研</td><td align="center">ARM授权+自研</td><td align="center">江南计算所</td><td align="center">中科院计算机所</td></tr><tr><td>指令集体系来源</td><td align="center">X86授权+自研</td><td align="center">X86/ARM授权</td><td align="center">SPARC/ARM授权+自研</td><td align="center">ARM授权+自研</td><td align="center">ARM授权＋自研</td><td align="center">Alpha授权+自研</td><td align="center">MIPS授权+自研</td></tr><tr><td>应用领域</td><td align="center">Zen1架构，性能较强，应用生态丰富</td><td align="center">上海地区覆盖广，X86应用生态丰富</td><td align="center">产品起步晚，性能相对弱势，被美国制裁中</td><td align="center">ARM前景广阔：产品线丰富，性能不断提高；架构层级授权自主化程度较高</td><td align="center">ARM前景广阔，性能较强，有阿里云作为生态铺垫，前景较好</td><td align="center">在军方市场占有率高，底层应用、超算为主力方向</td><td align="center">自主化程度高，市场受成都考量</td></tr><tr><td>优势</td><td align="center">Zen1架构，性能较强，应用生态丰富</td><td align="center">上海地区覆盖广，X86应用生态丰富</td><td align="center">ARM前景广阔；产品线丰富，性能不断提升；架构层级授权自主化程度较高</td><td align="center">ARM前景广阔；产品线极其丰富，起步早，适配厂商多，能力最强</td><td align="center">ARM前景广阔，性能较强，有阿里云作为生态铺垫，前景较好</td><td align="center">在军方市场占有率较高，底层应用、超算为主力方向</td><td align="center">自主化程度高，市场还有待考量</td></tr><tr><td>劣势</td><td align="center">仅内核层级授权，自主化程度低；无桌面授权，收美国制裁中</td><td align="center">早期的X86内核层级授权，市场开拓不足</td><td align="center">产品起步晚，性能相对弱势，被美国制裁中</td><td align="center">受制裁中，未来存在不确定性</td><td align="center">阿里云目前难以在党政中获得竞争力</td><td align="center">超算为主要方向，商用产品开发不足，受美国制裁中</td><td align="center">MIPS生态应用匮乏、性能一般，不利用商用市场拓展</td></tr><tr><td>相关产品</td><td align="center">海光3000/5000/7000</td><td align="center">ZX-C/ZX-D/KX5000/KX6000/KH-20000/30000</td><td align="center">腾云S系列/鲲鹏D系列</td><td align="center">鲲鹏系列</td><td align="center">倚天710</td><td align="center">SW-1600/SW1610/SW</td><td align="center">龙芯1号/龙芯2号/龙芯3号</td></tr><tr><td>产品覆盖领域</td><td align="center">服务器</td><td align="center">嵌入式、服务器、桌面</td><td align="center">服务器、桌面、嵌入式</td><td align="center">服务器、桌面、嵌入式</td><td align="center">服务器</td><td align="center">服务器、桌面</td><td align="center">桌面、服务器、嵌入式</td></tr><tr><td>实际应用</td><td align="center">国家级超算</td><td align="center">联想笔记本、服务器、火星舱存储系统</td><td align="center">天河一号/天河二号/天河三号</td><td align="center">华为服务器、台式机</td><td align="center">阿里云服务器</td><td align="center">神威蓝光、神威·太湖之光</td><td align="center">玲珑/逸珑/福珑北斗导航卫星</td></tr></tbody></table><p>后面发现不好用博客展示于是还是用PPT写了哈哈哈哈烂尾楼咯</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>学习笔记</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>学科学习</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>计算机网络笔记-第五章-链路层以及局域网</title>
     <link href="/2022/10/17/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%BA%94%E7%AB%A0/"/>
     <url>/2022/10/17/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%BA%94%E7%AB%A0/</url>

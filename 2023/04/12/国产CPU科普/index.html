@@ -16,24 +16,24 @@
   <meta name="author" content="Crwei996">
   <meta name="keywords" content="">
   
-    <meta name="description" content="[TOC] 没写完……..不想写了。 一、引论和服务 一些术语介绍：主机和路由器是节点（网桥和交换机也是）：nodes 沿着通信路径,连接个相邻节 点通信信道的是链路：links 有线链路 无限链路 局域网，共享性链路   第二层协议数据单元帧frame，封装数据报 数据链路层负责从一个节点通过链路将 （帧中的）数据报发送到相邻的物理节点 （一个子网内部的2节点） 点到点链路的链路层服务 实现非">
+    <meta name="description" content="一、国产CPU种类    海光 兆芯 飞腾 鲲鹏 倚天710 申威 龙芯    研发单位 海光信息 上海兆芯 天津飞腾 海思华为 平头哥 申威科技 龙芯中科   团队背景 X86授权+自研 X86&#x2F;ARM授权 SPARC&#x2F;ARM授权+自研 ARM授权+自研 ARM授权+自研 江南计算所 中科院计算机所   指令集体系来源 X86授权+自研 X86&#x2F;ARM授权 SPARC&#x2F;ARM授权+自研 ARM授">
 <meta property="og:type" content="article">
-<meta property="og:title" content="计算机网络笔记-第五章-链路层以及局域网">
-<meta property="og:url" content="https://crwei996.github.io/2022/10/17/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%BA%94%E7%AB%A0/index.html">
+<meta property="og:title" content="国产CPU科普">
+<meta property="og:url" content="https://crwei996.github.io/2023/04/12/%E5%9B%BD%E4%BA%A7CPU%E7%A7%91%E6%99%AE/index.html">
 <meta property="og:site_name" content="欢迎来到我的博客~">
-<meta property="og:description" content="[TOC] 没写完……..不想写了。 一、引论和服务 一些术语介绍：主机和路由器是节点（网桥和交换机也是）：nodes 沿着通信路径,连接个相邻节 点通信信道的是链路：links 有线链路 无限链路 局域网，共享性链路   第二层协议数据单元帧frame，封装数据报 数据链路层负责从一个节点通过链路将 （帧中的）数据报发送到相邻的物理节点 （一个子网内部的2节点） 点到点链路的链路层服务 实现非">
+<meta property="og:description" content="一、国产CPU种类    海光 兆芯 飞腾 鲲鹏 倚天710 申威 龙芯    研发单位 海光信息 上海兆芯 天津飞腾 海思华为 平头哥 申威科技 龙芯中科   团队背景 X86授权+自研 X86&#x2F;ARM授权 SPARC&#x2F;ARM授权+自研 ARM授权+自研 ARM授权+自研 江南计算所 中科院计算机所   指令集体系来源 X86授权+自研 X86&#x2F;ARM授权 SPARC&#x2F;ARM授权+自研 ARM授">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/img20221017181135.png">
-<meta property="article:published_time" content="2022-10-17T10:08:56.000Z">
-<meta property="article:modified_time" content="2022-10-18T09:06:45.639Z">
+<meta property="og:image" content="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/img20230412210323.png">
+<meta property="article:published_time" content="2023-04-12T12:31:00.000Z">
+<meta property="article:modified_time" content="2023-05-06T05:28:28.262Z">
 <meta property="article:author" content="Crwei996">
-<meta property="article:tag" content="计算机网络">
+<meta property="article:tag" content="学科学习">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/img20221017181135.png">
+<meta name="twitter:image" content="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/img20230412210323.png">
   
   
   
-  <title>计算机网络笔记-第五章-链路层以及局域网 - 欢迎来到我的博客~</title>
+  <title>国产CPU科普 - 欢迎来到我的博客~</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -210,7 +210,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="计算机网络笔记-第五章-链路层以及局域网"></span>
+            <span id="subtitle" data-typed-text="国产CPU科普"></span>
           
         </div>
 
@@ -221,8 +221,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-10-17 18:08" pubdate>
-          October 17, 2022 pm
+        <time datetime="2023-04-12 20:31" pubdate>
+          April 12, 2023 pm
         </time>
       </span>
     
@@ -233,7 +233,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.5k words
+          936 words
         
       </span>
     
@@ -244,7 +244,7 @@
         
         
         
-          13 mins
+          8 mins
         
       </span>
     
@@ -282,119 +282,117 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">计算机网络笔记-第五章-链路层以及局域网</h1>
+            <h1 style="display: none">国产CPU科普</h1>
             
             
               <div class="markdown-body">
                 
-                <p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20221017181046.png" srcset="/img/loading.gif" lazyload></p>
-<p>[TOC]</p>
-<p>没写完……..不想写了。</p>
-<h1 id="一、引论和服务"><a href="#一、引论和服务" class="headerlink" title="一、引论和服务"></a>一、引论和服务</h1><ul>
-<li>一些术语介绍：主机和路由器是节点（网桥和交换机也是）：nodes</li>
-<li>沿着通信路径,连接个相邻节 点通信信道的是链路：links<ul>
-<li>有线链路</li>
-<li>无限链路</li>
-<li>局域网，共享性链路</li>
-</ul>
-</li>
-<li>第二层协议数据单元帧frame，封装数据报</li>
-<li><strong>数据链路层负责从一个节点通过链路将 （帧中的）数据报发送到相邻的物理节点 （一个子网内部的2节点）</strong></li>
-<li><strong>点到点链路的链路层服务 实现非常简单，封装和解封装</strong></li>
-<li><strong>WAN——广域网（采用点到点链路）</strong><ul>
-<li>带宽大、距离远（延迟大）</li>
-<li>如果采用多点连接方式<ul>
-<li>竞争方式：一旦冲突代价大</li>
-<li> 令牌等协调方式：在其中协调节点的发送代价大</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>LAN——局域网（采用多点连接方式）</strong><ul>
-<li> 连接节点非常方便</li>
-<li>接到共享型介质上（或网络交换机），就可以连接所有其他节点</li>
-</ul>
-</li>
-<li><strong>多点连接方式网络的链路层 功能实现相当复杂</strong><ul>
-<li>多点接入：协调各节点对共享性介质的访问和使用</li>
-<li>竞争方式：冲突之后的协调</li>
-<li>令牌方式：令牌产生，占有和释放等</li>
-</ul>
-</li>
-</ul>
-<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20221018155801.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20221018155811.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20221018155820.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20221018155834.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20221018155847.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20221018155853.png" srcset="/img/loading.gif" lazyload></p>
-<p><strong>“ rdt(reliable data transfer protocol,可靠数据传输协议)”</strong></p>
-<h1 id="二、差错检测和纠正"><a href="#二、差错检测和纠正" class="headerlink" title="二、差错检测和纠正"></a>二、差错检测和纠正</h1><p><strong>比特差错</strong>：比特在传输过程中可能会产生差错，从1变成0，也可能从0变成1，这就叫比特差错。</p>
-<p><strong>误码率BER（Bit Error Rate）</strong>:在一段传输时间内，传输错误的比特占所传输的比特总数的比率就叫做误码率。</p>
-<p><strong>模二运算</strong>：在进行循环冗余检测CRC的时候会使用到模二运算，运算规则:二进制数进行运算时不进位。</p>
-<p>例如：1111+1010 = 0101。减法和加法一样，按减法规则计算。</p>
-<p><strong>循环冗余检验CRC</strong>：<a target="_blank" rel="noopener" href="https://blog.csdn.net/liyuanbhu/article/details/7882789?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522166608125216782391813808%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=166608125216782391813808&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-7882789-null-null.142%5Ev58%5Econtrol,201%5Ev3%5Eadd_ask&utm_term=%E5%BE%AA%E7%8E%AF%E5%86%97%E4%BD%99%E6%A0%A1%E9%AA%8C&spm=1018.2226.3001.4187">这里的话我用几句话说不清楚，我也是刚学这个知识点，想了解明白可以看这篇博客。</a>在接收端把接收到的数据以帧为单位进行CRC检验，把收到的每一个帧都除以同样的除数P(模2原算的结果)，然后检查得到的余数R。如果在传输过程中没有差错，那么结果CRC检验后得出的余数R肯定是0，如果不是0，那么就说明在传输过程中出现的差错。</p>
-<p>若得出的余数R为0，则判断这个帧没有差错，就接受。</p>
-<p>若R不为0，则判断这个帧有差错，如果无法确定究竟是哪一位或者哪几位出现了差错就会选择丢弃这个帧。</p>
-<p><strong>强调：</strong>在数据链路层仅仅使用循环冗余检验CRC差错检验技术，则只能做到对帧的<strong>无差错接受</strong>，即<strong>凡是接收端数据链路层接受的帧，我们都能以非常接近于1的概率认为这些帧在传输过程中没有产生差错。</strong>接收端丢弃的帧虽然<strong>曾收到了</strong>，但最终还是因为有差错<strong>被丢弃</strong>，即没有接受。<strong>通常认为，凡是接受端数据链路层接受的帧均无差错。</strong></p>
-<p><u><strong>在数链路层使用CRC检验，能够实现无比特差错的传输，但这还不是可靠传输！！！</strong></u></p>
-<h1 id="三、多点访问协议"><a href="#三、多点访问协议" class="headerlink" title="三、多点访问协议"></a>三、多点访问协议</h1><p>多路访问链路和协议</p>
-<p>两种类型的链路（一个子网内部链路连接形式）：点对点和广播 (共享线路或媒体)。</p>
-<ul>
-<li>点对点<ul>
-<li>拨号访问的PPP</li>
-<li>以太网交换机和主机之间的点对点链路</li>
-</ul>
-</li>
-<li>广播<ul>
-<li>传统以太网</li>
-<li> HFC上行链路</li>
-<li> 802.11无线局域网</li>
-</ul>
-</li>
-</ul>
-<p><strong>多路访问协议</strong></p>
-<ul>
-<li>单个共享的广播型链路</li>
-<li>2个或更多站点同时传送: 冲突（collision）<ul>
-<li> 多个节点在同一个时刻发送，则会收到2个或多个信号叠加</li>
-</ul>
-</li>
-<li>MAC（媒体访问控制）协议：分类<ul>
-<li>信道划分<ul>
-<li>把信道划分成小片（时间、频率、编码）</li>
-<li>分配片给每个节点专用</li>
-</ul>
-</li>
-<li> 随机访问</li>
-<li>信道不划分，允许冲突</li>
-<li>冲突后恢复</li>
-<li>依次轮流<ul>
-<li>节点依次轮流</li>
-<li> 但是有很多数据传输的节点可以获得较长的信道使用权</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>啊啊啊啊，不想写了，贴图，后面的就不写了，感觉自己看了这一章的视频学到的东西不多，这一块建议看书。</p>
-<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20221018164933.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20221018164940.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20221018165159.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20221018165309.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20221018165336.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20221018165351.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20221018165504.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20221018165517.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20221018165558.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20221018165616.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20221018165631.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20221018165647.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20221018165736.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20221018165812.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20221018165853.png" srcset="/img/loading.gif" lazyload></p>
-<p>不想再贴图了，没意思…</p>
-<h1 id="四、Lans"><a href="#四、Lans" class="headerlink" title="四、Lans"></a>四、Lans</h1><h2 id="一-、addressing，ARP"><a href="#一-、addressing，ARP" class="headerlink" title="(一)、addressing，ARP"></a>(一)、addressing，ARP</h2><h2 id="二-、Ethernet"><a href="#二-、Ethernet" class="headerlink" title="(二)、Ethernet"></a>(二)、Ethernet</h2><h2 id="三-、802-11WLAN"><a href="#三-、802-11WLAN" class="headerlink" title="(三)、802.11WLAN"></a>(三)、802.11WLAN</h2><h2 id="四-、switches"><a href="#四-、switches" class="headerlink" title="(四)、switches"></a>(四)、switches</h2><h2 id="五-、VLANS"><a href="#五-、VLANS" class="headerlink" title="(五)、VLANS"></a>(五)、VLANS</h2><h1 id="五、链路虚拟化：MPLS"><a href="#五、链路虚拟化：MPLS" class="headerlink" title="五、链路虚拟化：MPLS"></a>五、链路虚拟化：MPLS</h1><h1 id="六、数据中心网络"><a href="#六、数据中心网络" class="headerlink" title="六、数据中心网络"></a>六、数据中心网络</h1><h1 id="七、a-day-in-the-life-of-web-request"><a href="#七、a-day-in-the-life-of-web-request" class="headerlink" title="七、a day in the life of web request"></a>七、a day in the life of web request</h1>
+                <h1 id="一、国产CPU种类"><a href="#一、国产CPU种类" class="headerlink" title="一、国产CPU种类"></a>一、国产CPU种类</h1><table>
+<thead>
+<tr>
+<th></th>
+<th align="center">海光</th>
+<th align="center">兆芯</th>
+<th align="center">飞腾</th>
+<th align="center">鲲鹏</th>
+<th align="center">倚天710</th>
+<th align="center">申威</th>
+<th align="center">龙芯</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>研发单位</td>
+<td align="center">海光信息</td>
+<td align="center">上海兆芯</td>
+<td align="center">天津飞腾</td>
+<td align="center">海思华为</td>
+<td align="center">平头哥</td>
+<td align="center">申威科技</td>
+<td align="center">龙芯中科</td>
+</tr>
+<tr>
+<td>团队背景</td>
+<td align="center">X86授权+自研</td>
+<td align="center">X86/ARM授权</td>
+<td align="center">SPARC/ARM授权+自研</td>
+<td align="center">ARM授权+自研</td>
+<td align="center">ARM授权+自研</td>
+<td align="center">江南计算所</td>
+<td align="center">中科院计算机所</td>
+</tr>
+<tr>
+<td>指令集体系来源</td>
+<td align="center">X86授权+自研</td>
+<td align="center">X86/ARM授权</td>
+<td align="center">SPARC/ARM授权+自研</td>
+<td align="center">ARM授权+自研</td>
+<td align="center">ARM授权＋自研</td>
+<td align="center">Alpha授权+自研</td>
+<td align="center">MIPS授权+自研</td>
+</tr>
+<tr>
+<td>应用领域</td>
+<td align="center">Zen1架构，性能较强，应用生态丰富</td>
+<td align="center">上海地区覆盖广，X86应用生态丰富</td>
+<td align="center">产品起步晚，性能相对弱势，被美国制裁中</td>
+<td align="center">ARM前景广阔：产品线丰富，性能不断提高；架构层级授权自主化程度较高</td>
+<td align="center">ARM前景广阔，性能较强，有阿里云作为生态铺垫，前景较好</td>
+<td align="center">在军方市场占有率高，底层应用、超算为主力方向</td>
+<td align="center">自主化程度高，市场受成都考量</td>
+</tr>
+<tr>
+<td>优势</td>
+<td align="center">Zen1架构，性能较强，应用生态丰富</td>
+<td align="center">上海地区覆盖广，X86应用生态丰富</td>
+<td align="center">ARM前景广阔；产品线丰富，性能不断提升；架构层级授权自主化程度较高</td>
+<td align="center">ARM前景广阔；产品线极其丰富，起步早，适配厂商多，能力最强</td>
+<td align="center">ARM前景广阔，性能较强，有阿里云作为生态铺垫，前景较好</td>
+<td align="center">在军方市场占有率较高，底层应用、超算为主力方向</td>
+<td align="center">自主化程度高，市场还有待考量</td>
+</tr>
+<tr>
+<td>劣势</td>
+<td align="center">仅内核层级授权，自主化程度低；无桌面授权，收美国制裁中</td>
+<td align="center">早期的X86内核层级授权，市场开拓不足</td>
+<td align="center">产品起步晚，性能相对弱势，被美国制裁中</td>
+<td align="center">受制裁中，未来存在不确定性</td>
+<td align="center">阿里云目前难以在党政中获得竞争力</td>
+<td align="center">超算为主要方向，商用产品开发不足，受美国制裁中</td>
+<td align="center">MIPS生态应用匮乏、性能一般，不利用商用市场拓展</td>
+</tr>
+<tr>
+<td>相关产品</td>
+<td align="center">海光3000/5000/7000</td>
+<td align="center">ZX-C/ZX-D/KX5000/KX6000/KH-20000/30000</td>
+<td align="center">腾云S系列/鲲鹏D系列</td>
+<td align="center">鲲鹏系列</td>
+<td align="center">倚天710</td>
+<td align="center">SW-1600/SW1610/SW</td>
+<td align="center">龙芯1号/龙芯2号/龙芯3号</td>
+</tr>
+<tr>
+<td>产品覆盖领域</td>
+<td align="center">服务器</td>
+<td align="center">嵌入式、服务器、桌面</td>
+<td align="center">服务器、桌面、嵌入式</td>
+<td align="center">服务器、桌面、嵌入式</td>
+<td align="center">服务器</td>
+<td align="center">服务器、桌面</td>
+<td align="center">桌面、服务器、嵌入式</td>
+</tr>
+<tr>
+<td>实际应用</td>
+<td align="center">国家级超算</td>
+<td align="center">联想笔记本、服务器、火星舱存储系统</td>
+<td align="center">天河一号/天河二号/天河三号</td>
+<td align="center">华为服务器、台式机</td>
+<td align="center">阿里云服务器</td>
+<td align="center">神威蓝光、神威·太湖之光</td>
+<td align="center">玲珑/逸珑/福珑北斗导航卫星</td>
+</tr>
+</tbody></table>
+<p>后面发现不好用博客展示于是还是用PPT写了哈哈哈哈烂尾楼咯</p>
+
                 
               </div>
             
@@ -427,7 +425,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">#计算机网络</a>
+        <a href="/tags/%E5%AD%A6%E7%A7%91%E5%AD%A6%E4%B9%A0/">#学科学习</a>
       
     </div>
   
@@ -439,8 +437,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>计算机网络笔记-第五章-链路层以及局域网</div>
-      <div>https://crwei996.github.io/2022/10/17/计算机网络笔记-第五章/</div>
+      <div>国产CPU科普</div>
+      <div>https://crwei996.github.io/2023/04/12/国产CPU科普/</div>
     </div>
     <div class="license-meta">
       
@@ -452,7 +450,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>October 17, 2022</div>
+          <div>April 12, 2023</div>
         </div>
       
       
@@ -482,18 +480,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/04/12/%E5%9B%BD%E4%BA%A7CPU%E7%A7%91%E6%99%AE/" title="国产CPU科普">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">国产CPU科普</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/10/11/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0-%E7%AC%AC%E5%9B%9B%E7%AB%A0/" title="计算机网络笔记-第四章-网络层">
-                        <span class="hidden-mobile">计算机网络笔记-第四章-网络层</span>
+                      <a href="/2022/10/17/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%BA%94%E7%AB%A0/" title="计算机网络笔记-第五章-链路层以及局域网">
+                        <span class="hidden-mobile">计算机网络笔记-第五章-链路层以及局域网</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

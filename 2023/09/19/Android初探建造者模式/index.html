@@ -25,7 +25,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/img20230919163605.png">
 <meta property="article:published_time" content="2023-09-19T08:32:33.000Z">
-<meta property="article:modified_time" content="2023-09-19T08:44:34.817Z">
+<meta property="article:modified_time" content="2023-09-19T08:52:31.973Z">
 <meta property="article:author" content="Crwei996">
 <meta property="article:tag" content="Android">
 <meta name="twitter:card" content="summary_large_image">
@@ -233,7 +233,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          4.4k words
+          4.6k words
         
       </span>
     
@@ -244,7 +244,7 @@
         
         
         
-          37 mins
+          39 mins
         
       </span>
     
@@ -304,59 +304,9 @@
 <p>支持对象属性的变化：如果一个对象的属性有较高的变动性，使用建造者模式可以很方便地修改具体建造者的实现，而无需修改客户端的代码。这样可以降低耦合度，提高系统的可维护性和可扩展性。</p>
 <p>总而言之，建造者模式将复杂对象的创建过程封装起来，提供灵活的构建流程，以及逐步构建复杂对象的能力，同时避免了构造方法参数过多的问题，支持对象属性的变化。它能够帮助我们更好地组织和管理复杂对象的创建，提高代码的可读性、可维护性和可扩展性。</p>
 <h1 id="三、建造者模式案例"><a href="#三、建造者模式案例" class="headerlink" title="三、建造者模式案例"></a>三、建造者模式案例</h1><p>下面是我自己本人在csdn上学习他人博客写的一个小案例，如有错误欢迎指出，自己也是第一次学习建造者模式，还存在很多很多不懂之处。</p>
-<p>public class TestPerson {<br>    public String mPersonName;<br>    private int mPersonAge;<br>    private int mSex;<br>    private String mCardNumber;</p>
-<pre><code class="hljs">public String getmPersonName() &#123;
-    return mPersonName;
-&#125;
- 
-public int getmPersonAge() &#123;
-    return mPersonAge;
-&#125;
- 
-public TestPerson(TestPerson.Builder builder)&#123;
-    this.mCardNumber = builder.mCardNumber;
-    this.mSex = builder.mSex;
-    this.mPersonAge = builder.mPersonAge;
-    this.mPersonName = builder.mPersonName;
-    if(this.mPersonAge&gt;100)&#123;
-        throw new IllegalArgumentException(&quot;年龄不能超过100&quot;);
-    &#125;
-&#125;
- 
-public static final class Builder &#123;
-    private String mPersonName;
-    private int mPersonAge;
-    private int mSex;
-    private String mCardNumber;
- 
-    public Builder()&#123;&#125;
- 
-    public TestPerson build()&#123;
-        return new TestPerson(this);
-    &#125;
- 
-    public TestPerson.Builder addPersonName(String mPersonName) &#123;
-        this.mPersonName = mPersonName;
-        return this;
-    &#125;
- 
-    public TestPerson.Builder addPersonAge(int mPersonAge) &#123;
-        this.mPersonAge = mPersonAge;
-        return this;
-    &#125;
- 
-    public TestPerson.Builder addSex(int mSex) &#123;
-        this.mSex = mSex;
-        return this;
-    &#125;
- 
-    public TestPerson.Builder addCardNumber(String mCardNumber) &#123;
-        this.mCardNumber = mCardNumber;
-        return this;
-    &#125;
-&#125;
-</code></pre>
-<p>}</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><code class="hljs Java"><span class="hljs-keyword">package</span> com.example.constraintlayoutlearning;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@Author</span> Crwei</span><br><span class="hljs-comment"> * date 2023/9/18 19:48</span><br><span class="hljs-comment"> */</span><br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TestPerson</span> </span>&#123;<br>    <span class="hljs-keyword">public</span> String mPersonName;<br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> mPersonAge;<br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> mSex;<br>    <span class="hljs-keyword">private</span> String mCardNumber;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getmPersonName</span><span class="hljs-params">()</span> </span>&#123;<br>        <span class="hljs-keyword">return</span> mPersonName;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getmPersonAge</span><span class="hljs-params">()</span> </span>&#123;<br>        <span class="hljs-keyword">return</span> mPersonAge;<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">TestPerson</span><span class="hljs-params">(TestPerson.Builder builder)</span></span>&#123;<br>        <span class="hljs-keyword">this</span>.mCardNumber = builder.mCardNumber;<br>        <span class="hljs-keyword">this</span>.mSex = builder.mSex;<br>        <span class="hljs-keyword">this</span>.mPersonAge = builder.mPersonAge;<br>        <span class="hljs-keyword">this</span>.mPersonName = builder.mPersonName;<br>        <span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>.mPersonAge&gt;<span class="hljs-number">100</span>)&#123;<br>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> IllegalArgumentException(<span class="hljs-string">&quot;年龄不能超过100&quot;</span>);<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Builder</span> </span>&#123;<br>        <span class="hljs-keyword">private</span> String mPersonName;<br>        <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> mPersonAge;<br>        <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> mSex;<br>        <span class="hljs-keyword">private</span> String mCardNumber;<br><br>        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Builder</span><span class="hljs-params">()</span></span>&#123;&#125;<br><br>        <span class="hljs-function"><span class="hljs-keyword">public</span> TestPerson <span class="hljs-title">build</span><span class="hljs-params">()</span></span>&#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> TestPerson(<span class="hljs-keyword">this</span>);<br>        &#125;<br><br>        <span class="hljs-keyword">public</span> TestPerson.<span class="hljs-function">Builder <span class="hljs-title">addPersonName</span><span class="hljs-params">(String mPersonName)</span> </span>&#123;<br>            <span class="hljs-keyword">this</span>.mPersonName = mPersonName;<br>            <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;<br>        &#125;<br>        <span class="hljs-keyword">public</span> TestPerson.<span class="hljs-function">Builder <span class="hljs-title">addPersonAge</span><span class="hljs-params">(<span class="hljs-keyword">int</span> mPersonAge)</span> </span>&#123;<br>            <span class="hljs-keyword">this</span>.mPersonAge = mPersonAge;<br>            <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;<br>        &#125;<br>        <span class="hljs-keyword">public</span> TestPerson.<span class="hljs-function">Builder <span class="hljs-title">addSex</span><span class="hljs-params">(<span class="hljs-keyword">int</span> mSex)</span> </span>&#123;<br>            <span class="hljs-keyword">this</span>.mSex = mSex;<br>            <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;<br>        &#125;<br>        <span class="hljs-keyword">public</span> TestPerson.<span class="hljs-function">Builder <span class="hljs-title">addCardNumber</span><span class="hljs-params">(String mCardNumber)</span> </span>&#123;<br>            <span class="hljs-keyword">this</span>.mCardNumber = mCardNumber;<br>            <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;<br>        &#125;<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+
 <p>这里对TestPerson类使用了构建者模式，该类的建立参考来源 。</p>
 <p>从上面可以看到，除了mPersonName是用public修饰的，其余都是private，为什么要用public以及对这个属性设置了两个ge方法，这和我使用Databing有关，这里我们等会说，一般都是使用private（而且还可以加final修饰）。</p>
 <p>定义完基本的属性以后，我们在下面定义了一个用final实现的抽象类Builder，这样做的目的是为了避免在子类中修改build方法，以保持整个类的稳定性和一致性，同时也可以提高性能，因为final修饰会在编译的时候被内联优化。在Builder中我们又定义了和TestPerson相同的属性，这些属性的修饰符都是private。然后我们提供了大量的方法来set Builder中的属性值，并且将其赋值给调用者。</p>

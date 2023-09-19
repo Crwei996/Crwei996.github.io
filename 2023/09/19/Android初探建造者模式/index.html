@@ -16,24 +16,24 @@
   <meta name="author" content="Crwei996">
   <meta name="keywords" content="">
   
-    <meta name="description" content="一、国产CPU种类    海光 兆芯 飞腾 鲲鹏 倚天710 申威 龙芯    研发单位 海光信息 上海兆芯 天津飞腾 海思华为 平头哥 申威科技 龙芯中科   团队背景 X86授权+自研 X86&#x2F;ARM授权 SPARC&#x2F;ARM授权+自研 ARM授权+自研 ARM授权+自研 江南计算所 中科院计算机所   指令集体系来源 X86授权+自研 X86&#x2F;ARM授权 SPARC&#x2F;ARM授权+自研 ARM授">
+    <meta name="description" content="[TOC] 一、建造者模式定义： 构建者模式（Builder Pattern）是一种创建型设计模式，旨在通过提供一种灵活的方式来构建复杂对象。该模式将对象的构建过程与其表示分离，使得同样的构建过程可以创建不同的表示。 具体来说，构建者模式使用一个独立的构建器（Builder）类来封装对象的构建过程。构建器类提供一系列方法来设置对象的属性，并最终返回构建好的对象。这种方式可以避免使用多个构造函数或过">
 <meta property="og:type" content="article">
-<meta property="og:title" content="国产CPU科普">
-<meta property="og:url" content="https://crwei996.github.io/2023/04/12/%E5%9B%BD%E4%BA%A7CPU%E7%A7%91%E6%99%AE/index.html">
+<meta property="og:title" content="Android初探建造者模式">
+<meta property="og:url" content="https://crwei996.github.io/2023/09/19/Android%E5%88%9D%E6%8E%A2%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/index.html">
 <meta property="og:site_name" content="欢迎来到我的博客~">
-<meta property="og:description" content="一、国产CPU种类    海光 兆芯 飞腾 鲲鹏 倚天710 申威 龙芯    研发单位 海光信息 上海兆芯 天津飞腾 海思华为 平头哥 申威科技 龙芯中科   团队背景 X86授权+自研 X86&#x2F;ARM授权 SPARC&#x2F;ARM授权+自研 ARM授权+自研 ARM授权+自研 江南计算所 中科院计算机所   指令集体系来源 X86授权+自研 X86&#x2F;ARM授权 SPARC&#x2F;ARM授权+自研 ARM授">
+<meta property="og:description" content="[TOC] 一、建造者模式定义： 构建者模式（Builder Pattern）是一种创建型设计模式，旨在通过提供一种灵活的方式来构建复杂对象。该模式将对象的构建过程与其表示分离，使得同样的构建过程可以创建不同的表示。 具体来说，构建者模式使用一个独立的构建器（Builder）类来封装对象的构建过程。构建器类提供一系列方法来设置对象的属性，并最终返回构建好的对象。这种方式可以避免使用多个构造函数或过">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/img20230412210323.png">
-<meta property="article:published_time" content="2023-04-12T12:31:00.000Z">
-<meta property="article:modified_time" content="2023-05-06T05:37:37.258Z">
+<meta property="og:image" content="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/img20230919163605.png">
+<meta property="article:published_time" content="2023-09-19T08:32:33.000Z">
+<meta property="article:modified_time" content="2023-09-19T08:44:34.817Z">
 <meta property="article:author" content="Crwei996">
-<meta property="article:tag" content="学科学习">
+<meta property="article:tag" content="Android">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/img20230412210323.png">
+<meta name="twitter:image" content="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/img20230919163605.png">
   
   
   
-  <title>国产CPU科普 - 欢迎来到我的博客~</title>
+  <title>Android初探建造者模式 - 欢迎来到我的博客~</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -210,7 +210,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="国产CPU科普"></span>
+            <span id="subtitle" data-typed-text="Android初探建造者模式"></span>
           
         </div>
 
@@ -221,8 +221,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-04-12 20:31" pubdate>
-          April 12, 2023 pm
+        <time datetime="2023-09-19 16:32" pubdate>
+          September 19, 2023 pm
         </time>
       </span>
     
@@ -233,7 +233,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          936 words
+          4.4k words
         
       </span>
     
@@ -244,7 +244,7 @@
         
         
         
-          8 mins
+          37 mins
         
       </span>
     
@@ -282,116 +282,115 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">国产CPU科普</h1>
+            <h1 style="display: none">Android初探建造者模式</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="一、国产CPU种类"><a href="#一、国产CPU种类" class="headerlink" title="一、国产CPU种类"></a>一、国产CPU种类</h1><table>
-<thead>
-<tr>
-<th></th>
-<th align="center">海光</th>
-<th align="center">兆芯</th>
-<th align="center">飞腾</th>
-<th align="center">鲲鹏</th>
-<th align="center">倚天710</th>
-<th align="center">申威</th>
-<th align="center">龙芯</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>研发单位</td>
-<td align="center">海光信息</td>
-<td align="center">上海兆芯</td>
-<td align="center">天津飞腾</td>
-<td align="center">海思华为</td>
-<td align="center">平头哥</td>
-<td align="center">申威科技</td>
-<td align="center">龙芯中科</td>
-</tr>
-<tr>
-<td>团队背景</td>
-<td align="center">X86授权+自研</td>
-<td align="center">X86/ARM授权</td>
-<td align="center">SPARC/ARM授权+自研</td>
-<td align="center">ARM授权+自研</td>
-<td align="center">ARM授权+自研</td>
-<td align="center">江南计算所</td>
-<td align="center">中科院计算机所</td>
-</tr>
-<tr>
-<td>指令集体系来源</td>
-<td align="center">X86授权+自研</td>
-<td align="center">X86/ARM授权</td>
-<td align="center">SPARC/ARM授权+自研</td>
-<td align="center">ARM授权+自研</td>
-<td align="center">ARM授权＋自研</td>
-<td align="center">Alpha授权+自研</td>
-<td align="center">MIPS授权+自研</td>
-</tr>
-<tr>
-<td>应用领域</td>
-<td align="center">Zen1架构，性能较强，应用生态丰富</td>
-<td align="center">上海地区覆盖广，X86应用生态丰富</td>
-<td align="center">产品起步晚，性能相对弱势，被美国制裁中</td>
-<td align="center">ARM前景广阔：产品线丰富，性能不断提高；架构层级授权自主化程度较高</td>
-<td align="center">ARM前景广阔，性能较强，有阿里云作为生态铺垫，前景较好</td>
-<td align="center">在军方市场占有率高，底层应用、超算为主力方向</td>
-<td align="center">自主化程度高，市场受成都考量</td>
-</tr>
-<tr>
-<td>优势</td>
-<td align="center">Zen1架构，性能较强，应用生态丰富</td>
-<td align="center">上海地区覆盖广，X86应用生态丰富</td>
-<td align="center">ARM前景广阔；产品线丰富，性能不断提升；架构层级授权自主化程度较高</td>
-<td align="center">ARM前景广阔；产品线极其丰富，起步早，适配厂商多，能力最强</td>
-<td align="center">ARM前景广阔，性能较强，有阿里云作为生态铺垫，前景较好</td>
-<td align="center">在军方市场占有率较高，底层应用、超算为主力方向</td>
-<td align="center">自主化程度高，市场还有待考量</td>
-</tr>
-<tr>
-<td>劣势</td>
-<td align="center">仅内核层级授权，自主化程度低；无桌面授权，收美国制裁中</td>
-<td align="center">早期的X86内核层级授权，市场开拓不足</td>
-<td align="center">产品起步晚，性能相对弱势，被美国制裁中</td>
-<td align="center">受制裁中，未来存在不确定性</td>
-<td align="center">阿里云目前难以在党政中获得竞争力</td>
-<td align="center">超算为主要方向，商用产品开发不足，受美国制裁中</td>
-<td align="center">MIPS生态应用匮乏、性能一般，不利用商用市场拓展</td>
-</tr>
-<tr>
-<td>相关产品</td>
-<td align="center">海光3000/5000/7000</td>
-<td align="center">ZX-C/ZX-D/KX5000/KX6000/KH-20000/30000</td>
-<td align="center">腾云S系列/鲲鹏D系列</td>
-<td align="center">鲲鹏系列</td>
-<td align="center">倚天710</td>
-<td align="center">SW-1600/SW1610/SW</td>
-<td align="center">龙芯1号/龙芯2号/龙芯3号</td>
-</tr>
-<tr>
-<td>产品覆盖领域</td>
-<td align="center">服务器</td>
-<td align="center">嵌入式、服务器、桌面</td>
-<td align="center">服务器、桌面、嵌入式</td>
-<td align="center">服务器、桌面、嵌入式</td>
-<td align="center">服务器</td>
-<td align="center">服务器、桌面</td>
-<td align="center">桌面、服务器、嵌入式</td>
-</tr>
-<tr>
-<td>实际应用</td>
-<td align="center">国家级超算</td>
-<td align="center">联想笔记本、服务器、火星舱存储系统</td>
-<td align="center">天河一号/天河二号/天河三号</td>
-<td align="center">华为服务器、台式机</td>
-<td align="center">阿里云服务器</td>
-<td align="center">神威蓝光、神威·太湖之光</td>
-<td align="center">玲珑/逸珑/福珑北斗导航卫星</td>
-</tr>
-</tbody></table>
-<h1 id="后面发现不好用博客展示于是还是用PPT写了哈哈哈哈烂尾楼咯"><a href="#后面发现不好用博客展示于是还是用PPT写了哈哈哈哈烂尾楼咯" class="headerlink" title="后面发现不好用博客展示于是还是用PPT写了哈哈哈哈烂尾楼咯"></a>后面发现不好用博客展示于是还是用PPT写了哈哈哈哈烂尾楼咯</h1>
+                <p>[TOC]</p>
+<h1 id="一、建造者模式"><a href="#一、建造者模式" class="headerlink" title="一、建造者模式"></a>一、建造者模式</h1><p>定义：</p>
+<p>构建者模式（Builder Pattern）是一种创建型设计模式，旨在通过提供一种灵活的方式来构建复杂对象。该模式将对象的构建过程与其表示分离，使得同样的构建过程可以创建不同的表示。</p>
+<p>具体来说，构建者模式使用一个独立的构建器（Builder）类来封装对象的构建过程。构建器类提供一系列方法来设置对象的属性，并最终返回构建好的对象。这种方式可以避免使用多个构造函数或过多的参数，使得对象的构建过程更加直观和易于扩展。</p>
+<p>生活中的例子：</p>
+<p>假设你要建造一座房子，房子有多个组成部分，例如墙壁、门、窗户等。使用构建者模式可以将建造房子的过程分解为以下步骤：</p>
+<p>创建一个房子构建器类（HouseBuilder），该类负责构建房子对象。<br>在房子构建器类中定义一系列方法，例如 buildWalls()、buildDoors()、buildWindows() 等，用于设置房子的各个组成部分。<br>客户端代码创建一个房子构建器对象，并使用该对象调用相应的方法来设置房子的属性，例如设置墙壁类型、设置门的数量、设置窗户的尺寸等。<br>最后，房子构建器对象调用 build() 方法返回构建好的房子对象。<br>使用构建者模式，在不同的场景下可以定制化构建不同类型的房子，而且可以灵活地添加或修改构建过程中的步骤。</p>
+<p>总结一下，构建者模式通过将复杂对象的构建过程与其表示分离，提供了一种灵活且可扩展的方式来构建对象。</p>
+<h1 id="二、建造者模式作用"><a href="#二、建造者模式作用" class="headerlink" title="二、建造者模式作用"></a>二、建造者模式作用</h1><p>建造者模式是一种创建型设计模式，主要用于构建复杂对象。它的作用是将对象的创建过程与表示分离，以便可以使用相同的构建过程来创建不同的表示。</p>
+<p>具体来说，建造者模式的作用如下：</p>
+<p>封装复杂对象的创建过程：建造者模式将复杂对象的构建过程封装在具体建造者中，客户端无需知道对象的具体创建细节，只需要通过指挥者或者具体建造者来完成对象的构建。</p>
+<p>提供灵活的构建流程：建造者模式允许客户端通过不同的组合方式来构建对象，从而灵活地生成不同的表示。客户端可以根据需求自由选择具体建造者，并按照需要调用建造者的方法来设置对象的属性。</p>
+<p>支持逐步构建复杂对象：通过建造者模式，可以逐步构建复杂对象，每一步都可以通过建造者的方法来设置对象的属性，最终调用建造者的方法返回构建好的对象。这种逐步构建的方式对于某些复杂对象的构建非常有帮助。</p>
+<p>避免构造方法参数过多：对于具有大量属性的对象，如果使用构造方法来创建对象，会出现参数过多、参数顺序困扰等问题。而建造者模式通过链式调用设置属性，避免了构造方法参数过多的问题，使得代码更加清晰易读。</p>
+<p>支持对象属性的变化：如果一个对象的属性有较高的变动性，使用建造者模式可以很方便地修改具体建造者的实现，而无需修改客户端的代码。这样可以降低耦合度，提高系统的可维护性和可扩展性。</p>
+<p>总而言之，建造者模式将复杂对象的创建过程封装起来，提供灵活的构建流程，以及逐步构建复杂对象的能力，同时避免了构造方法参数过多的问题，支持对象属性的变化。它能够帮助我们更好地组织和管理复杂对象的创建，提高代码的可读性、可维护性和可扩展性。</p>
+<h1 id="三、建造者模式案例"><a href="#三、建造者模式案例" class="headerlink" title="三、建造者模式案例"></a>三、建造者模式案例</h1><p>下面是我自己本人在csdn上学习他人博客写的一个小案例，如有错误欢迎指出，自己也是第一次学习建造者模式，还存在很多很多不懂之处。</p>
+<p>public class TestPerson {<br>    public String mPersonName;<br>    private int mPersonAge;<br>    private int mSex;<br>    private String mCardNumber;</p>
+<pre><code class="hljs">public String getmPersonName() &#123;
+    return mPersonName;
+&#125;
+ 
+public int getmPersonAge() &#123;
+    return mPersonAge;
+&#125;
+ 
+public TestPerson(TestPerson.Builder builder)&#123;
+    this.mCardNumber = builder.mCardNumber;
+    this.mSex = builder.mSex;
+    this.mPersonAge = builder.mPersonAge;
+    this.mPersonName = builder.mPersonName;
+    if(this.mPersonAge&gt;100)&#123;
+        throw new IllegalArgumentException(&quot;年龄不能超过100&quot;);
+    &#125;
+&#125;
+ 
+public static final class Builder &#123;
+    private String mPersonName;
+    private int mPersonAge;
+    private int mSex;
+    private String mCardNumber;
+ 
+    public Builder()&#123;&#125;
+ 
+    public TestPerson build()&#123;
+        return new TestPerson(this);
+    &#125;
+ 
+    public TestPerson.Builder addPersonName(String mPersonName) &#123;
+        this.mPersonName = mPersonName;
+        return this;
+    &#125;
+ 
+    public TestPerson.Builder addPersonAge(int mPersonAge) &#123;
+        this.mPersonAge = mPersonAge;
+        return this;
+    &#125;
+ 
+    public TestPerson.Builder addSex(int mSex) &#123;
+        this.mSex = mSex;
+        return this;
+    &#125;
+ 
+    public TestPerson.Builder addCardNumber(String mCardNumber) &#123;
+        this.mCardNumber = mCardNumber;
+        return this;
+    &#125;
+&#125;
+</code></pre>
+<p>}</p>
+<p>这里对TestPerson类使用了构建者模式，该类的建立参考来源 。</p>
+<p>从上面可以看到，除了mPersonName是用public修饰的，其余都是private，为什么要用public以及对这个属性设置了两个ge方法，这和我使用Databing有关，这里我们等会说，一般都是使用private（而且还可以加final修饰）。</p>
+<p>定义完基本的属性以后，我们在下面定义了一个用final实现的抽象类Builder，这样做的目的是为了避免在子类中修改build方法，以保持整个类的稳定性和一致性，同时也可以提高性能，因为final修饰会在编译的时候被内联优化。在Builder中我们又定义了和TestPerson相同的属性，这些属性的修饰符都是private。然后我们提供了大量的方法来set Builder中的属性值，并且将其赋值给调用者。</p>
+<p>使用方法：</p>
+<pre><code class="hljs">    try&#123;
+        person = new TestPerson.Builder()
+                .addPersonName(&quot;张三&quot;)
+                .addSex(1)
+                .addPersonAge(122)
+                .build();
+    &#125;catch (IllegalArgumentException e)&#123;
+        System.out.println(e.getMessage());
+    &#125;
+</code></pre>
+<p> 可能有人问，这里为什么要用try-catch，注意看上面代码的这一部分</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs kotlin"><span class="hljs-keyword">public</span> TestPerson(TestPerson.Builder builder)&#123;<br>    <span class="hljs-keyword">this</span>.mCardNumber = builder.mCardNumber;<br>    <span class="hljs-keyword">this</span>.mSex = builder.mSex;<br>    <span class="hljs-keyword">this</span>.mPersonAge = builder.mPersonAge;<br>    <span class="hljs-keyword">this</span>.mPersonName = builder.mPersonName;<br>    <span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>.mPersonAge&gt;<span class="hljs-number">100</span>)&#123;<br>        <span class="hljs-keyword">throw</span> new IllegalArgumentException(<span class="hljs-string">&quot;年龄不能超过100&quot;</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>我们对这个属性做了一个限制，因为我们实际使用的时候，肯定会有一些属性有所限制，我们可以直接在这里就对限制做了处理，然后在Builder的时候使用try-catch捕获异常，可以更方便的知道数据是否存在问题。</p>
+<p>上面的代码虽然使用了建造者模式，但是还是可以优化的，有一个插件叫Lombok，使用该插件可以减少TestPerson的大量代码，我还没有用过，我就不介绍了，有兴趣的朋友可以自行研究。</p>
+<h1 id="四、建造者模式的使用场景"><a href="#四、建造者模式的使用场景" class="headerlink" title="四、建造者模式的使用场景"></a>四、建造者模式的使用场景</h1><p>创建复杂对象：当需要创建一个带有多个属性并且初始化过程较为复杂的对象时，可以使用建造者模式。通过逐步设置对象的属性，并在最后一步构建对象，能够简化对象的创建过程。</p>
+<p>需要灵活组合对象属性：建造者模式能够根据需要选择性地设置对象的属性。可以按照不同的需求组合不同的属性，而无需创建多个独立的构造函数或使用大量的可选参数。</p>
+<p>避免重叠构造器问题：当一个类的属性较多，存在多种组合方式时，使用传统的多个构造函数容易造成构造器重叠问题。而建造者模式可以通过链式调用的方式避免这个问题，并使代码更加清晰易读。</p>
+<p>支持不可变对象构建：建造者模式可以创建不可变对象，即对象一旦创建就不能再修改其属性值。通过在Builder类中将对象的属性设置为final，并在build方法中创建不可变对象，可以确保对象的属性值在创建后不会被修改。</p>
+<p>便于扩展：如果需要为已有的对象添加新的属性，或者需要创建该类的子类，使用建造者模式能够方便地进行扩展和修改。</p>
+<p>总的来说，建造者模式适用于需要创建复杂对象，并且需要对对象属性进行灵活组合和控制的场景。它能够提高代码的可读性、可维护性和可扩展性。</p>
+<p>像我们使用的Okhttp以及一些dialog里面大部分都是使用的建造者模式的，使用建造者模式可以让使用者更方便灵活的使用他们。</p>
+<h1 id="五、一些思考"><a href="#五、一些思考" class="headerlink" title="五、一些思考"></a>五、一些思考</h1><p>我在学习建造者模式的时候是和databing一起使用的，在使用的过程中我发现，当TestPerson的属性都是private的时候，我在xml中这样使用是不可以的，无法获取到对象的值，当我将该属性的值的修饰符从private改成public的时候就可以获取到了，我很不解。</p>
+<p>只有把mPersonName的修饰符改成public才行，如果有更好的方案实现或者其他方法评论区交流，目前本人刚学，刚刚入门建造者模式。</p>
+<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/imgimg20230919164157.png" srcset="/img/loading.gif" lazyload></p>
+<p>我以为是private在建造者模式里面无法通过get拿到值，但是我在activity or fragment中又可以拿到值。</p>
+<p><img src="https://picgo-wei.oss-cn-shenzhen.aliyuncs.com/img20230919164248.png" srcset="/img/loading.gif" lazyload></p>
+<p>这里又可以拿到另外一个private修饰的属性的值，我不理解。</p>
+<p>后面还会进行更新本文，今天是对建造者模式的初步了解，还有很多不会的地方，学生所做，如有写错，敬请批评指正。</p>
+
                 
               </div>
             
@@ -409,7 +408,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E8%AF%BE%E5%A0%82%E5%B1%95%E7%A4%BA/" class="category-chain-item">课堂展示</a>
+  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="category-chain-item">学习笔记</a>
   
   
 
@@ -424,7 +423,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E5%AD%A6%E7%A7%91%E5%AD%A6%E4%B9%A0/">#学科学习</a>
+        <a href="/tags/Android/">#Android</a>
       
     </div>
   
@@ -436,8 +435,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>国产CPU科普</div>
-      <div>https://crwei996.github.io/2023/04/12/国产CPU科普/</div>
+      <div>Android初探建造者模式</div>
+      <div>https://crwei996.github.io/2023/09/19/Android初探建造者模式/</div>
     </div>
     <div class="license-meta">
       
@@ -449,7 +448,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>April 12, 2023</div>
+          <div>September 19, 2023</div>
         </div>
       
       
@@ -479,18 +478,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/09/19/Android%E5%88%9D%E6%8E%A2%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/" title="Android初探建造者模式">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Android初探建造者模式</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/10/17/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%BA%94%E7%AB%A0/" title="计算机网络笔记-第五章-链路层以及局域网">
-                        <span class="hidden-mobile">计算机网络笔记-第五章-链路层以及局域网</span>
+                      <a href="/2023/04/12/%E5%9B%BD%E4%BA%A7CPU%E7%A7%91%E6%99%AE/" title="国产CPU科普">
+                        <span class="hidden-mobile">国产CPU科普</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
